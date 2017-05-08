@@ -20,7 +20,6 @@ if(isset($_POST['email']) && !empty($_POST['email']) && isset($_POST['prenom']) 
     
     if($check){
         include("connexion.inc.php");
-        header('Location: accueil_connecte.php');
     }
     else
         echo "Un problème s'est produit lors de la requete.<br>";
