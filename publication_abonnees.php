@@ -13,6 +13,4 @@ if($check){
 else
 	echo "Erreur de requete.<br>";
 
-
-
 ?>
