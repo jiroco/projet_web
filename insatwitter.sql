@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Client :  127.0.0.1
--- Généré le :  Sam 06 Mai 2017 à 19:05
+-- Généré le :  Lun 08 Mai 2017 à 10:03
 -- Version du serveur :  5.7.14
 -- Version de PHP :  5.6.25
 
@@ -36,7 +36,8 @@ CREATE TABLE `abonnee` (
 --
 
 INSERT INTO `abonnee` (`IDUSER`, `IDUSERABONNE`) VALUES
-(2, 1);
+(2, 1),
+(1, 2);
 
 -- --------------------------------------------------------
 
@@ -71,7 +72,21 @@ INSERT INTO `messages` (`ID`, `IDUSER`, `CONTENU`) VALUES
 (1, 1, 'Salut ceci est un test pour la base de donnée'),
 (2, 2, 'Ceci est un test de message pour david neyron'),
 (3, 2, 'Ceci est le deuxieme message pour un test de bdd'),
-(4, 1, 'TEST d\'abonnée');
+(4, 1, 'TEST d\'abonnée'),
+(5, 1, 'Bonjour à tous j\'espere que tout le monde va bien!!! ceci est un test de publication');
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `parametres`
+--
+
+CREATE TABLE `parametres` (
+  `IDUSER` int(4) NOT NULL,
+  `GROUPES` int(4) NOT NULL,
+  `ABONNE` int(4) NOT NULL,
+  `PUBLIC` varchar(256) NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -114,6 +129,12 @@ ALTER TABLE `messages`
   ADD PRIMARY KEY (`ID`);
 
 --
+-- Index pour la table `parametres`
+--
+ALTER TABLE `parametres`
+  ADD PRIMARY KEY (`IDUSER`);
+
+--
 -- Index pour la table `user`
 --
 ALTER TABLE `user`
@@ -132,7 +153,7 @@ ALTER TABLE `groupe`
 -- AUTO_INCREMENT pour la table `messages`
 --
 ALTER TABLE `messages`
-  MODIFY `ID` int(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `ID` int(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 --
 -- AUTO_INCREMENT pour la table `user`
 --
