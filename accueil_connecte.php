@@ -23,7 +23,7 @@ include("publication_message.php");
 </div>
 
 <div>
-	<?php include("recherche_abonne.php"); ?>
+	<a href="recherche_abonne.php">recherche d'abonne</a>
 </div>
 
 <div>

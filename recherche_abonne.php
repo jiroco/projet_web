@@ -1,9 +1,9 @@
 <?php
-
+session_start();
 ?>
 
 <div>
-	<form action="accueil_connecte.php" method="POST">
+	<form action="recherche_abonne.php" method="POST">
 			<p>Recherche d'abonné : </p>
 			<input type="text" name="recherchea" placeholder="Entrer le pseudo de l'utilisateur"/><br>
 			<input type="submit" value="rechercher">
