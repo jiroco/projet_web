@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Client :  127.0.0.1
--- Généré le :  Lun 08 Mai 2017 à 10:03
+-- Généré le :  Sam 13 Mai 2017 à 12:57
 -- Version du serveur :  5.7.14
 -- Version de PHP :  5.6.25
 
@@ -37,7 +37,22 @@ CREATE TABLE `abonnee` (
 
 INSERT INTO `abonnee` (`IDUSER`, `IDUSERABONNE`) VALUES
 (2, 1),
-(1, 2);
+(1, 2),
+(9, 1),
+(3, 2),
+(3, 1),
+(2, 3);
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `atog`
+--
+
+CREATE TABLE `atog` (
+  `IDUSER` int(11) NOT NULL,
+  `IDGROUPE` int(11) NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -73,7 +88,9 @@ INSERT INTO `messages` (`ID`, `IDUSER`, `CONTENU`) VALUES
 (2, 2, 'Ceci est un test de message pour david neyron'),
 (3, 2, 'Ceci est le deuxieme message pour un test de bdd'),
 (4, 1, 'TEST d\'abonnée'),
-(5, 1, 'Bonjour à tous j\'espere que tout le monde va bien!!! ceci est un test de publication');
+(5, 1, 'Bonjour à tous j\'espere que tout le monde va bien!!! ceci est un test de publication'),
+(6, 2, 'Ceci est un message test que l\'on fait avec david neyron'),
+(7, 9, 'Vous etes tous moche !');
 
 -- --------------------------------------------------------
 
@@ -109,8 +126,9 @@ CREATE TABLE `user` (
 
 INSERT INTO `user` (`ID`, `NOM`, `PRENOM`, `MAIL`, `USERNAME`, `PASSWORD`) VALUES
 (1, 'Savoldelli', 'Jean', 'jean.savoldelli@insa-cvl.fr', 'jiroco', 'd4e457004f39e01ec1c25fdc0cfb20d5a9ebb792'),
-(3, 'Lepêtre', 'Kévin', 'kevin.lepretre@insa-cvl.fr', 'klepretr', '965cff85d41273e529083032d195147f0a0ad0d1'),
-(2, 'Neyron', 'David', 'david.neyron@insa-cvl.fr', 'dneyron', '3b6fbdb8226354a706dc9f70221c6e3794e7a296');
+(3, 'Leprêtre', 'Kévin', 'kevin.lepretre@insa-cvl.fr', 'klepretr', '965cff85d41273e529083032d195147f0a0ad0d1'),
+(2, 'Neyron', 'David', 'david.neyron@insa-cvl.fr', 'dneyron', '3b6fbdb8226354a706dc9f70221c6e3794e7a296'),
+(9, 'abdallah', 'yanis', 'yanis.abdallah@insa-cvl.fr', 'yabda', '9d9a0b447934653304e8524cf877a4b36b4df366');
 
 --
 -- Index pour les tables exportées
@@ -153,12 +171,12 @@ ALTER TABLE `groupe`
 -- AUTO_INCREMENT pour la table `messages`
 --
 ALTER TABLE `messages`
-  MODIFY `ID` int(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `ID` int(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 --
 -- AUTO_INCREMENT pour la table `user`
 --
 ALTER TABLE `user`
-  MODIFY `ID` int(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `ID` int(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
