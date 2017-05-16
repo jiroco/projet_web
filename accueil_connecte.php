@@ -9,7 +9,7 @@ if ((!isset($_SESSION['id'])) || (empty($_SESSION['id']))){
 	<form action="accueil_connecte.php" method="POST">
 			<p>Publication</p>
 			Contenu :<input type="text" name="textpublie" placeholder="Entrer votre texte"/><br>
-			<input type="submit" value="publier">
+			<input type="submit" name="click" value="publier">
 	</form>
 </div>
 
@@ -25,6 +25,12 @@ include("publication_message.php");
 <div>
 	<a href="recherche_abonne.php">recherche d'abonne</a>
 </div>
+
+<div>
+	mes groupes: <?php include("mes_groupes.php");?>
+</div>
+
+
 
 <div>
 	<a href="deconnexion.php">Deconnexion</a>
