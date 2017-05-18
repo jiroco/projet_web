@@ -16,6 +16,7 @@ if ((!isset($_SESSION['id'])) || (empty($_SESSION['id']))){
 <?php
 include("publication_abonnees.php");
 include("publication_message.php");
+
 ?>
 
 <div>
