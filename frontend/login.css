@@ -1,0 +1,15 @@
+.titre{
+	text-align: center;
+	font-size: 30px;
+}
+
+.form-control {
+    height: auto;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 10px;
+    font-size: 16px;
+    width: 200px;
+    margin: auto;
+}
