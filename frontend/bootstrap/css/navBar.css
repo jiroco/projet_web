@@ -15,10 +15,22 @@ body {
 
 }
 
-.navbar{
-	background: #AFAFAF	; 
+.affix {
+      top: 80px;
 }
 
-.barreNavigation {
-	color: black;
+.couleurINSA{
+	color:#CF0A1D;
+}
+
+.button-bas-droite{
+	align-content:flex-end;
+}
+
+.padding-default{
+    padding: 25px;
+} 
+
+.taille-textarea{
+	resize: none;
 }
