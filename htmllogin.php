@@ -13,7 +13,7 @@ include("navBar.php")
 
 <div w3-include-html="navBar.php.html"></div> 
 <div>
-	<form action="accueil_connecte.php" method="POST">
+	<form action="login.php" method="POST">
 		<div class="titre">
 			<p>Connexion</p>
 			<br>

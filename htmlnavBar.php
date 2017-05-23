@@ -15,7 +15,8 @@
 
     <!-- Custom styles for this template -->
     <link href="bootstrap/css/navBar.css" rel="stylesheet">
-    <link href="bootstrap/js/actif.js" rel="stylesheet">
+ 
+       <link href="bootstrap/js/actif.js" rel="stylesheet">
 
     <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
     <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
@@ -28,7 +29,8 @@
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.mo
+      in.js"></script>
     <![endif]-->
   </head>
 
@@ -49,9 +51,9 @@
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav nav-tabs">
-            <li onload="actif()" class=""><a id="1"  href="pageAccueil.php">Home</a></li>
-            <li onload="actif()" class=""><a id="2" href="about.php">About</a></li>
-            <li onload="actif()" class=""><a id="3" href="contact.php">Contact</a></li>
+            <li onload="actif()" class=""><a id="1"  href="htmlpageAccueil.php">Home</a></li>
+            <li onload="actif()" class=""><a id="2" href="htmlabout.php">About</a></li>
+            <li onload="actif()" class=""><a id="3" href="htmlcontact.php">Contact</a></li>
           </ul>
         </div>
 

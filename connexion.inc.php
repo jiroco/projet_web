@@ -1,7 +1,5 @@
 <?php
-
-$DBcon = new PDO('mysql:host=localhost;dbname=insatwitter;charset=utf8','CH','ch');
-echo "ok"
+$DBcon = new PDO('mysql:host=localhost;dbname=insatwitter;charset=utf8','root','root');
 if (isset($_POST['username']) && !empty($_POST['username']) && isset($_POST['passwd']) && !empty($_POST['passwd']) && is_string($_POST['username']) && is_string($_POST['passwd'])){
 		
 		$username=htmlspecialchars($_POST['username']);
@@ -19,16 +17,3 @@ if (isset($_POST['username']) && !empty($_POST['username']) && isset($_POST['pas
                     $_SESSION['prenom']=$donnee['PRENOM'];
                     echo "<meta http-equiv='refresh' content='0; URL=accueil_connecte.php'>";    
                 }
-                else
-                    echo "Mauvais identifiants.<br>";
-            }
-            else
-                echo "Mauvais identifiants.<br>";               
-        }
-        else
-            echo "Erreur de requete.<br>";
-        
-		$req->closeCursor();
-	}
-
-?>

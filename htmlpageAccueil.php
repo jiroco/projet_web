@@ -6,7 +6,7 @@
 
 </head>
 <body >
-	<?php include 'navBar.php';?>
+	<?php include 'htmlnavBar.php';?>
 
 	<div class="container">
 	  <div class="row">
@@ -75,35 +75,7 @@
 											    <p>Lorem ipsum dolor sit amet,</p>
 											    <p>Lorem ipsum dolor sit amet,</p>
 											    <p>Lorem ipsum dolor sit amet,</p>
-											    <p>Lorem ipsum dolor sit amet,</p>
-											    <p>Lorem ipsum dolor sit amet,</p>
-											    <p>Lorem ipsum dolor sit amet,</p>
-											    <p>Lorem ipsum dolor sit amet,</p>
-											    <p>Lorem ipsum dolor sit amet,</p>
-											    <p>Lorem ipsum dolor sit amet,</p>
-											    <p>Lorem ipsum dolor sit amet,</p>
-											    <p>Lorem ipsum dolor sit amet,</p>
-											    <p>Lorem ipsum dolor sit amet,</p>
-											    <p>Lorem ipsum dolor sit amet,</p>
-											    <p>Lorem ipsum dolor sit amet,</p>
-											    <p>Lorem ipsum dolor sit amet,</p>
-											    <p>Lorem ipsum dolor sit amet,</p>
-											    <p>Lorem ipsum dolor sit amet,</p>
 
-											    <p>Lorem ipsum dolor sit amet,</p>
-											     <p>Lorem ipsum dolor sit amet,</p>
-											    <p>Lorem ipsum dolor sit amet,</p>
-											    <p>Lorem ipsum dolor sit amet,</p>
-											    <p>Lorem ipsum dolor sit amet,</p>
-											    <p>Lorem ipsum dolor sit amet,</p>
-											    <p>Lorem ipsum dolor sit amet,</p>
-											    <p>Lorem ipsum dolor sit amet,</p>
-											    <p>Lorem ipsum dolor sit amet,</p>
-											    <p>Lorem ipsum dolor sit amet,</p>
-											    <p>Lorem ipsum dolor sit amet,</p>
-											    <p>Lorem ipsum dolor sit amet,</p>
-
-											    <p>Lorem ipsum dolor sit amet,</p>
 											    <br/>
 											</div>
 										</div><!--fin media-->
@@ -151,9 +123,7 @@
 
 		   
 
-		</div>
-	  </div>
-	</div>
+	</div><!--container fin -->
 
 </body>
 </html>
