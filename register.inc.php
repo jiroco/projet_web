@@ -1,5 +1,5 @@
 <?php
-$DBcon = new PDO('mysql:host=localhost;dbname=insatwitter;charset=utf8','root','');
+$DBcon = new PDO('mysql:host=localhost;dbname=insatwitter;charset=utf8','root','root');
 
 if(isset($_POST['email']) && !empty($_POST['email']) && isset($_POST['prenom']) && !empty($_POST['prenom']) && isset($_POST['nom']) && !empty($_POST['nom']) && isset($_POST['passwd']) && !empty($_POST['passwd']) && isset($_POST['username']) && !empty($_POST['username'])){
 	$email=htmlspecialchars($_POST['email']);

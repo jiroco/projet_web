@@ -8,7 +8,7 @@
 
   <body>
 
-    <?php include 'navBar.php';?>
+    <?php include 'htmlnavBar.php';?>
 
 
 

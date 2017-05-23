@@ -5,7 +5,7 @@
   </head>
 
   <body>
-    <?php include 'navBar.php';?>
+    <?php include 'htmlnavBar.php';?>
 
      <div class="container">
           <h3>About</h3>

@@ -1,5 +1,5 @@
 <?php
-$DBcon = new PDO('mysql:host=localhost;dbname=insatwitter;charset=utf8','root','');
+$DBcon = new PDO('mysql:host=localhost;dbname=insatwitter;charset=utf8','root','root');
 
 if(isset($_POST['textpublie']) && !empty($_POST['textpublie']) && isset($_POST['click']) ){
 	$text=htmlspecialchars($_POST['textpublie']);
@@ -12,7 +12,8 @@ if(isset($_POST['textpublie']) && !empty($_POST['textpublie']) && isset($_POST['
     $check=$req->execute();
     
     if($check){
-        header('Location: accueil_connecte.php');
+        echo "<meta http-equiv='refresh' content='0; URL=accueil_connecte.php'>";    
+        //header('Location: accueil_connecte.php');
     }
     else
         echo "Un problème s'est produit lors de la requete.<br>";
