@@ -1,7 +1,7 @@
 <?php
 
-$DBcon = new PDO('mysql:host=localhost;dbname=insatwitter;charset=utf8','root','');
-
+$DBcon = new PDO('mysql:host=localhost;dbname=insatwitter;charset=utf8','CH','ch');
+echo "ok"
 if (isset($_POST['username']) && !empty($_POST['username']) && isset($_POST['passwd']) && !empty($_POST['passwd']) && is_string($_POST['username']) && is_string($_POST['passwd'])){
 		
 		$username=htmlspecialchars($_POST['username']);
