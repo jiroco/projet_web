@@ -33,12 +33,11 @@ if ((!isset($_SESSION['id'])) || (empty($_SESSION['id']))){
 		    </nav> <!--nav vertical fin -->
 
 
-			 <div class="col-md-10" > <!--colonne 10 debut -->
+			<div class="col-md-10" > <!--colonne 10 debut -->
 		      <div class="tab-content"> <!--tab content début -->
+		      	
 		      	<div id="accueil" class="tab-pane fade in active"> <!--Accueil début -->
-		        	<h3>Accueil</h3>
-		        	<p>Les publications</p>
-					
+		        	<h3>Accueil</h3>					
 					<div class="container" style="width:100%;"> <!--container de publication début -->
 					    <div class="panel panel-default"> <!--Publier début -->
 					      <div class="panel-heading">
@@ -56,53 +55,16 @@ if ((!isset($_SESSION['id'])) || (empty($_SESSION['id']))){
 					  	  </div>
 					    </div> <!--Publier fin -->
 
-	<?php
-	include("publication_abonnees.php");
-	include("publication_message.php");
-
-	?>
 
 					    <div class="panel panel-default"> <!--Twitt début -->
 					      	<div class="panel-heading"> <!--panel heading pour toutes les publications début -->
 					      		<h3>Publication</h3>
 					      		<br>
-					      		<div class="panel-group"> <!--panel group debut-->
-
-					      		  <div id="addMessage" class="panel panel-default"> <!--panel 1 début-->
-								      	<div class="media">
-										    <div class="media-left media-top">
-										      	<img src="" class="media-object" style="width:100px;margin-top: 10px; margin-left: 10px;"> <!--mettre une image de profil dans src -->
-											</div>
-											<div class="media-body">
-											    <h4 class="media-heading"><br/>Nom Prénom</h4>
-											    <p>Lorem ipsum dolor sit amet,</p>
-											    <p>Lorem ipsum dolor sit amet,</p>
-											    <br/>
-											</div>
-										</div>
-								   </div> <!--panel 1 fin-->
-									<hr/>
-
-
-
-
-
-									<div class="panel panel-default">	<!--panel 2 début-->									
-										<div class="media"> <!--debut media -->
-										    <div class="media-left media-top">
-										      	<img src="" class="media-object" style="width:100px;margin-top: 10px; margin-left: 10px;">
-											</div>
-										    <div class="media-body">
-										      	<h4 class="media-heading"><br/>Nom Prénom  2</h4>
-											    <p>Lorem ipsum dolor sit amet,</p>
-											    <p>Lorem ipsum dolor sit amet,</p>
-											    <p>Lorem ipsum dolor sit amet,</p>
-
-											    <br/>
-											</div>
-										</div><!--fin media-->
-									</div> <!--panel 2 fin-->
-									
+					      		<div class="panel-group" id="addMessage" > <!--panel group debut-->
+									<?php
+									include("publication_abonnees.php");
+									include("publication_message.php");
+									?>					      		  
 								</div> <!--panel group fin -->
 							</div><!--panel heading pour toutes les publications fin -->
 					    </div><!--Twitt fin -->			    
@@ -110,21 +72,75 @@ if ((!isset($_SESSION['id'])) || (empty($_SESSION['id']))){
 				</div><!-- Acceuil fin -->
 		      
 
-		        <div id="profil" class="tab-pane fade "> <!--Home début -->
-		          	<h3>Mon profil</h3>
-		          	<p>
-		          		nom : Depelley<br>
-		          		prenom : Alo<br>
-		          		age : 21<br>
-		          	</p>
-
-	 			  	
-		        </div> <!-- Home fin -->
+		        <div id="profil" class="tab-pane fade "> <!--profil début -->
+		        	<div class="container" style="width:100%;"> <!--container de profil début -->
+		        		<div class="panel-group"><!-- panel group debut -->
+						    <div class="panel panel-default"><!-- panel debut -->
+							    <div class="panel-heading">
+							    	<h3>Mon Profil</h3>
+							    </div>
+							    <div class="panel-body"> <!-- panel body debut  -->
+									<div class="row"> <!-- row debut -->
+                						<div class="col-md-3 col-lg-3 " align="center"> <img alt="User Pic" src="http://babyinfoforyou.com/wp-content/uploads/2014/10/avatar-300x300.png" class="img-circle img-responsive"> 
+                						</div>
+                					
+	                					<div class=" col-md-9 col-lg-9 "> 
+						                  <table class="table table-user-information">
+						                    <tbody>
+						                      <tr>
+						                        <td>Department:</td>
+						                        <td>STI</td>
+						                      </tr>
+						                      <tr>
+						                        <td>Nom :</td>
+						                        <td><?php print_r($_SESSION['prenom']." ".$_SESSION["nom"]) ?></td>
+						                      </tr>
+						                      <tr>
+						                        <td>Username</td>
+						                        <td><?php print_r($_SESSION['username']) ?></td>
+						                      </tr>
+						                      <tr>
+						                        <td>Date of Birth</td>
+						                        <td>30/05/1996</td>
+						                      </tr>						                   
+						                      <tr>					                 
+							                    <tr>
+							                        <td>Home Address</td>
+							                        <td>Kathmandu,Nepal</td>
+							                    </tr>
+							                    <tr>
+							                        <td>Email</td>
+							                        <td><a href="mailto:"><?php print_r($_SESSION['mail']) ?></a></td>
+							                    </tr>
+							                        <td>Phone Number</td>
+							                        <td>123-4567-890(Landline)<br><br>555-4567-890(Mobile)
+							                    </td>
+						                           
+						                      </tr>
+						                     
+						                    </tbody>
+						                  </table>
+						                </div>
+					                </div> <!-- row fin -->
+							    </div> <!-- panel body  fin -->
+						    </div><!-- panel fin -->
+			          </div><!-- panel group fin  -->
+			        </div><!--container de profil fin -->
+		        </div> <!-- profil fin -->
 
 
 		        <div id="paramètre" class="tab-pane fade"> <!--Paramètre début -->
-		          <h3>Parametre</h3>
-		          <p>Régler les parmètres</p>
+		        	<div class="container" style="width:100%;"><!--container début -->
+					  <div class="panel-group"><!--panel group début -->
+					    <div class="panel panel-default">
+					      <div class="panel-heading"><h3>Paramètres</h3></div>
+					      <div class="panel-body">
+					      	Panel Content 
+					      </div>
+					    </div>
+
+					  </div><!--panel group fin -->
+					</div><!--Container fin -->
 		        </div> <!-- Paramètre fin -->
 
 
@@ -138,26 +154,12 @@ if ((!isset($_SESSION['id'])) || (empty($_SESSION['id']))){
 		          <h3>Mes abonnés</h3>
 		          <p>La liste de mes abonnés ou leur dernière publication ?</p>
 		        </div> <!-- Abonnés fin -->
+			  
+
 			  </div> <!--tab content fin -->
-
-		      </div><!--colonne 10 fin -->
-	  </div><!--row fin -->
-
-		   
-
-		</div><!--container fin -->
-
-
-<!--
-	<div>
-		<form action="accueil_connecte.php" method="POST">
-				<p>Publication</p>
-				Contenu :<input type="text" name="textpublie" placeholder="Entrer votre texte"/><br>
-				<input type="submit" name="click" value="publier">
-		</form>
-	</div>
- -->
-
+		    </div><!--colonne 10 fin -->
+	  </div><!--row fin -->	   
+	</div><!--container fin -->
 
 
 
@@ -180,3 +182,9 @@ if ((!isset($_SESSION['id'])) || (empty($_SESSION['id']))){
 		<a href="deconnexion.php">Deconnexion</a>
 	</div>
 </body>
+</html>
+
+
+
+
+<script src="bootstrap/js/message.js"></script>

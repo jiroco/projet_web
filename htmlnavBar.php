@@ -16,30 +16,18 @@
     <!-- Custom styles for this template -->
     <link href="bootstrap/css/navBar.css" rel="stylesheet">
  
-       <link href="bootstrap/js/actif.js" rel="stylesheet">
-
-    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
-    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
-    <script src="bootstrap/js/ie-emulation-modes-warning.js"></script>
-
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.mo
-      in.js"></script>
-    <![endif]-->
   </head>
 
   <body>
 
 
-    <!-- Fixed navbar -->
-    <nav class="navbar navbar-default navbar-fixed-top">
-      <div class="container">
+    <!-- Fixed navbar début-->
+    <nav class="navbar navbar-default navbar-fixed-top ">
+      <div class="container "><!--Container début -->
         <div class="navbar-header">
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
             <span class="sr-only">Toggle navigation</span>
@@ -51,18 +39,21 @@
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav nav-tabs">
-            <li onload="actif()" class=""><a id="1"  href="htmlpageAccueil.php">Home</a></li>
-            <li onload="actif()" class=""><a id="2" href="htmlabout.php">About</a></li>
-            <li onload="actif()" class=""><a id="3" href="htmlcontact.php">Contact</a></li>
+            <li><a id="surligne" href="accueil_connecte.php">Home</a></li>
+            <li><a href="htmlabout.php">About</a></li>
+            <li><a href="htmlcontact.php">Contact</a></li>
           </ul>
+          <ul class="nav navbar-nav navbar-right"> <!-- button deconexion début-->
+            <li>
+              <a href="deconnexion.php" style="color: #CF0A1D;">
+                <span class="glyphicon glyphicon-off couleurINSA" ></span> Deconnexion</a>
+            </li>
+          </ul><!-- button deconexion fin-->
         </div>
-
-
-      </div><!--/.nav-collapse -->
-    </nav>
+      </div><!--Container fin -->
+    </nav><!-- Fixed navbar fin -->
 
     </div>
-
 
 
 
@@ -70,9 +61,8 @@
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
-    <script src="../../dist/js/bootstrap.min.js"></script>
-    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+    <script src="bootstrap/js/message.js"></script>
+
+
   </body>
 </html>
