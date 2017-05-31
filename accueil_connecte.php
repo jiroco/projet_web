@@ -145,14 +145,33 @@ if ((!isset($_SESSION['id'])) || (empty($_SESSION['id']))){
 
 
 		        <div id="groupe" class="tab-pane fade"> <!--Groupe début -->
-		          <h3>Mes groupes</h3>
-		          <p>La liste de mes groupes ou les dernière publication des groupes</p>
+		        	<div class="container">
+					  	<div class="panel panel-default">
+					    	<div class="panel-heading"><h3>Mes groupes</h3></div>
+					    	<div class="panel-body">
+					    		<p>La liste de mes groupes ou les dernière publication des groupes</p>
+					    		<div>
+									Mes groupes: <?php include("mes_groupes.php");?>
+								</div>
+					    	</div>
+					  	</div>
+					</div>
 		        </div> <!-- Groupe fin -->
 			  
 
 		        <div id="abonne" class="tab-pane fade"> <!--Abonnés début -->
-		          <h3>Mes abonnés</h3>
-		          <p>La liste de mes abonnés ou leur dernière publication ?</p>
+		        	<div class="container">
+					  	<div class="panel panel-default">
+					    	<div class="panel-heading"><h3>Mes abonnés</h3></div>
+					    	<div class="panel-body">
+					    		<p>La liste de mes abonnés / leur dernière publication / recherche de nouveau pour s'abonner</p>
+					    		<div>
+									<a href="recherche_abonne.php"><span class="glyphicon glyphicon-search" ></span> Recherche d'abonné</a>
+				  				</div>
+					    	</div>
+					  	</div>
+					</div>
+
 		        </div> <!-- Abonnés fin -->
 			  
 
@@ -163,14 +182,12 @@ if ((!isset($_SESSION['id'])) || (empty($_SESSION['id']))){
 
 
 
-
+<!--
 	<div>
 		<br/>Mes messages : <?php include("mes_messages.php");?><br/>
 	</div>
 
-	<div>
-		<a href="recherche_abonne.php">recherche d'abonne</a>
-	</div>
+	
 
 	<div>
 		mes groupes: <?php include("mes_groupes.php");?>
@@ -181,6 +198,7 @@ if ((!isset($_SESSION['id'])) || (empty($_SESSION['id']))){
 	<div>
 		<a href="deconnexion.php">Deconnexion</a>
 	</div>
+-->
 </body>
 </html>
 
