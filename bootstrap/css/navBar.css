@@ -1,0 +1,45 @@
+body {
+  min-height: 200px;
+  padding-top: 70px;
+
+  color:black;
+  background-color:white;
+  background-image:url();
+}
+
+.nomProjet:hover, .nomProjet{
+	color: #CF0A1D;
+ 	float: left;
+ 	height: 50px;
+ 	padding: 15px 15px;
+  	font-size: 18px;
+  	line-height: 20px;
+  	text-decoration: none;
+
+
+}
+
+#surligne:hover :focus{
+    background-color: #555;
+    color: white;
+}
+
+.affix {
+      top: 80px;
+}
+
+.couleurINSA{
+	color:#CF0A1D;
+}
+
+.button-bas-droite{
+	align-content:flex-end;
+}
+
+.padding-default{
+    padding: 25px;
+} 
+
+.taille-textarea{
+	resize: none;
+}
