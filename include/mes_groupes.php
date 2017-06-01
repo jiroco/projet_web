@@ -1,5 +1,5 @@
 <?php
-$DBcon = new PDO('mysql:host=localhost;dbname=insatwitter;charset=utf8','root','root');
+include("connexiondb.php");
 
 $req = $DBcon->prepare('SELECT NOM, ID from groupe JOIN atog ON atog.IDGROUPE=groupe.ID WHERE atog.IDUSER=?');
 $req->bindValue(1,$_SESSION['id'],PDO::PARAM_INT);

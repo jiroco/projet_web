@@ -1,6 +1,6 @@
 <?php
 
-$DBcon = new PDO('mysql:host=localhost;dbname=insatwitter;charset=utf8','root','root');
+include("connexiondb.php");
 
 $req = $DBcon->prepare('SELECT MESSAGE from messagetog WHERE IDGROUPE = ? GROUP BY ID DESC'); 
 $req->bindValue(1,$_SESSION['IDGROUPE'],PDO::PARAM_INT);
