@@ -1,5 +1,4 @@
 <?php
-session_start();
 if ((!isset($_SESSION['id'])) || (empty($_SESSION['id']))){
     echo "<meta http-equiv='refresh' content='0; URL=index.php'>";
     exit();
@@ -7,7 +6,7 @@ if ((!isset($_SESSION['id'])) || (empty($_SESSION['id']))){
 include("head.php");
 ?>
 
-<form class="" action="parametre.php" method="post">
+<form class="" action="accueil_connecte.php" method="post">
   <label for="">Changez votre mot de Passe</label>
   <input type="password" name="password" value="">
   <input type="submit" value="Changer">
@@ -38,6 +37,7 @@ if (empty($_POST['nom'])) {$_POST['nom']=NULL;}
 if (empty($_POST['prenom'])) {$_POST['prenom']=NULL;}
 
 $DBcon = new PDO('mysql:host=localhost;dbname=insatwitter;charset=utf8','root','');
+
 if ($_POST['password'] != NULL) {
   $change = $DBcon->prepare('UPDATE user SET PASSWORD = ? WHERE ID = ?');
   $change->bindValue(1,sha1($_POST['password']),PDO::PARAM_INT);
@@ -50,6 +50,7 @@ elseif ($_POST['username'] != NULL) {
   $change->bindValue(1,$_POST['username'],PDO::PARAM_INT);
   $change->bindValue(2,$_SESSION["id"],PDO::PARAM_INT);
   $change->execute();
+  $_SESSION['username']=$_POST['username'];
   echo "Votre username a bien été changé";
 }
 elseif ($_POST['mail'] != NULL) {
@@ -57,6 +58,7 @@ elseif ($_POST['mail'] != NULL) {
   $change->bindValue(1,$_POST['mail'],PDO::PARAM_INT);
   $change->bindValue(2,$_SESSION["id"],PDO::PARAM_INT);
   $change->execute();
+  $_SESSION['mail']=$_POST['mail'];
   echo "Votre adresse mail a bien été changé";
 }
 elseif ($_POST['nom'] != NULL) {
@@ -64,6 +66,7 @@ elseif ($_POST['nom'] != NULL) {
   $change->bindValue(1,$_POST['nom'],PDO::PARAM_INT);
   $change->bindValue(2,$_SESSION["id"],PDO::PARAM_INT);
   $change->execute();
+  $_SESSION['nom']=$_POST['nom'];
   echo "Votre nom a bien été changé";
 }
 elseif ($_POST['prenom'] != NULL) {
@@ -71,6 +74,7 @@ elseif ($_POST['prenom'] != NULL) {
   $change->bindValue(1,$_POST['prenom'],PDO::PARAM_INT);
   $change->bindValue(2,$_SESSION["id"],PDO::PARAM_INT);
   $change->execute();
+  $_SESSION['prenom']=$_POST['prenom'];
   echo "Votre prenom a bien été changé";
 }
 

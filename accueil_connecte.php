@@ -132,7 +132,7 @@ if ((!isset($_SESSION['id'])) || (empty($_SESSION['id']))){
 					    <div class="panel panel-default">
 					      <div class="panel-heading"><h3>Paramètres</h3></div>
 					      <div class="panel-body">
-					      	Panel Content 
+					      	<?php include("parametre.php");?>
 					      </div>
 					    </div>
 
