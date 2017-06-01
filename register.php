@@ -1,6 +1,6 @@
 <?php 
 include("head.php") 
-//session_start(); ?>
+?>
 
 
 <div >
@@ -15,6 +15,7 @@ include("head.php")
 		<input type="submit" value="S'inscrire"/>	
 	</form>
 </div>
+
 <?php
 include("register.inc.php");
 ?>

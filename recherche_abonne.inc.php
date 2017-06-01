@@ -3,8 +3,9 @@ $DBcon = new PDO('mysql:host=localhost;dbname=insatwitter;charset=utf8','root','
 
 if(isset($_POST['recherchea']) && !empty($_POST['recherchea'])){
 	$userrecherche=htmlspecialchars($_POST['recherchea']);
-	$req = $DBcon->prepare('SELECT NOM, PRENOM, USERNAME, ID FROM user  WHERE USERNAME=?'); 
+	$req = $DBcon->prepare('SELECT NOM, PRENOM, USERNAME, ID FROM user  WHERE USERNAME=? AND ID NOT IN (SELECT IDUSERABONNE FROM abonnee WHERE IDUSER=?)'); 
 	$req->bindValue(1,$userrecherche,PDO::PARAM_INT);
+	$req->bindValue(2,$_SESSION["id"],PDO::PARAM_INT);
 	$check=$req->execute();  
 
 	if($check){
@@ -21,24 +22,24 @@ if(isset($_POST['recherchea']) && !empty($_POST['recherchea'])){
 			</div>
 			<?php
 		}
-		else {
-			echo "L'utilisateur ".$userrecherche." n'existe pas.<br>";
-			echo "Veuillez rentrer le bon pseudo<br>";
-			echo "voici la liste possible<br>";
-			$req = $DBcon->prepare('SELECT NOM, PRENOM, USERNAME FROM user  WHERE USERNAME LIKE ?'); 
-			$req->bindValue(1,"%".$userrecherche."%",PDO::PARAM_INT);
-			$check=$req->execute();  
+	else {
+		echo "L'utilisateur ".$userrecherche." n'existe pas.<br>";
+		echo "Veuillez rentrer le bon pseudo<br>";
+		echo "voici la liste possible<br>";
+		$req = $DBcon->prepare('SELECT NOM, PRENOM, USERNAME FROM user  WHERE USERNAME LIKE ?'); 
+		$req->bindValue(1,"%".$userrecherche."%",PDO::PARAM_INT);
+		$check=$req->execute();  
 
-			if($check){
-				while ($resultat=$req->fetch()){
-					print_r("Nom : ".$resultat["NOM"]." ");
-					print_r("Prenom : ".$resultat["PRENOM"]." ");
-					print_r("Username : ".$resultat["USERNAME"]."<br>");
-				}
+		if($check){
+			while ($resultat=$req->fetch()){
+				print_r("Nom : ".$resultat["NOM"]." ");
+				print_r("Prenom : ".$resultat["PRENOM"]." ");
+				print_r("Username : ".$resultat["USERNAME"]."<br>");
 			}
-			else
-				echo "Erreur de requete.<br>";
 		}
+		else
+			echo "Erreur de requete.<br>";
+	}
 
 	}
 }
