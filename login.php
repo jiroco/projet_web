@@ -1,18 +1,35 @@
-<?php 
-include("head.php") 
-?>
 
+<?php 
+include("htmlnavBar.php")
+?>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Connexion</title>
+    <link rel="stylesheet" type="text/css" href="login.css">
+</head>
+<body>
+
+
+<div w3-include-html="htmlnavBar.php"></div> 
 <div>
-	<form action="login.php" method="POST">
+	<form action="htmlpageAccueil.php" method="POST">
+		<div class="titre">
 			<p>Connexion</p>
+			<br>
 			<input type="hidden" name="role"/>
-			Username :<input type="text" name="username" placeholder="Entrer votre username"/><br>
-			Password :<input type="password" name="passwd"  placeholder="Entrer votre mot de passe"/><br>
+			<input id="inputusername" class="form-control" placeholder="username" required="" autofocus="" type="username">
+			<br>
+			<input id="inputpasswd" class="form-control" placeholder="passwd" required="" type="passwd"><br>
+			<br>
 			<input type="submit" value="Connexion">
+		</div>
 	</form>
 </div>
 
+</body>
 
 <?php
-include("include/connexion.inc.php")
+include("connexion.inc.php")
 ?>
+</html>

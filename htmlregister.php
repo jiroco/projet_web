@@ -1,26 +1,34 @@
 <?php 
-include("navBar.php")
+include("htmlnavBar.php")
 ?>
 
 <!DOCTYPE html>
 <html>
 <head>
     <title>Inscription</title>
-    <link rel="stylesheet" type="text/css" href="register.css">
+    <link rel="stylesheet" type="text/css" href="htmlregister.css">
 </head>
 <body>
 <div class="container">
 
-      <form class="form-signin" method="POST">
+      <form action="htmlaccueil_connecte.php"class="form-signin" method="POST">
         <h2 class="titre">Inscription</h2>
+
         <label for="inputFisrtName" class="sr-only">First Name</label>
-        <input id="inputFisrtName" class="form-control" placeholder="Frst Name" required="" autofocus="" type="email">
-        <label for="inputName" class="sr-only">Name</label>
-        <input id="inputName" class="form-control" placeholder="Name" required="" autofocus="" type="Name">
+        <input id="inputFisrtName" class="form-control" placeholder="First Name" required="" autofocus="" type="prenom">
+
+        <label for="inputLastName" class="sr-only">Name</label>
+        <input id="inputLastName" class="form-control" placeholder="Last Name" required="" autofocus="" type="nom">
+
         <label for="inputEmail" class="sr-only">Email address</label>
         <input id="inputEmail" class="form-control" placeholder="Email address" required="" autofocus="" type="email">
+
+        <label for="inputUsername" class="sr-only">Username</label>
+        <input id="inputUsername" class="form-control" placeholder="Username" required="" type="username">
+
         <label for="inputPassword" class="sr-only">Password</label>
-        <input id="inputPassword" class="form-control" placeholder="Password" required="" type="password">
+        <input id="inputPassword" class="form-control" placeholder="Password" required="" type="passwd">
+
         <div class="checkbox">
           <label>
             <input value="remember-me" type="checkbox"> Remember me
@@ -32,3 +40,6 @@ include("navBar.php")
     </div>
 </body>
 </html>
+<?php
+include("register.inc.php")
+?>

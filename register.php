@@ -1,22 +1,45 @@
 <?php 
-include("head.php") 
+include("htmlnavBar.php")
 ?>
 
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Inscription</title>
+    <link rel="stylesheet" type="text/css" href="register.css">
+</head>
+<body>
+<div class="container">
 
-<div >
-	<form action="register.php" method="POST">
-		<p>Inscription</p>
-	    <input type="hidden" name="role"/>
-		Adresse mail :<input type="email" name="email" placeholder="Entrer votre adresse mail"/><br>
-		Prénom :<input type="text" name="prenom" placeholder="Entrer votre prénom"/><br>
-		Nom :<input type="text" name="nom" placeholder="Entrer votre nom"/><br>
-		Département:	<input type="text" name="departement" placeholder="Département"/><br>
-		Username:<input type="text" name="username" placeholder="Entrer votre username"/><br>
-		Mot de passe:	<input type="password" name="passwd" placeholder="Mot de passe"/><br>
-		<input type="submit" value="S'inscrire"/>	
-	</form>
-</div>
+      <form action="htmlpageAccueil.php" class="form-signin" method="POST">
+        <h2 class="titre">Inscription</h2>
 
+        <label for="inputFisrtName" class="sr-only">First Name</label>
+        <input id="inputFisrtName" class="form-control" placeholder="First Name" required="" autofocus="" type="prenom">
+
+        <label for="inputLastName" class="sr-only">Name</label>
+        <input id="inputLastName" class="form-control" placeholder="Last Name" required="" autofocus="" type="nom">
+
+        <label for="inputEmail" class="sr-only">Email address</label>
+        <input id="inputEmail" class="form-control" placeholder="Email address" required="" autofocus="" type="email">
+
+        <label for="inputUsername" class="sr-only">Username</label>
+        <input id="inputUsername" class="form-control" placeholder="Username" required="" type="username">
+
+        <label for="inputPassword" class="sr-only">Password</label>
+        <input id="inputPassword" class="form-control" placeholder="Password" required="" type="passwd">
+
+        <div class="checkbox">
+          <label>
+            <input value="remember-me" type="checkbox"> Remember me
+          </label>
+        </div>
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+      </form>
+
+    </div>
+</body>
+</html>
 <?php
-include("include/register.inc.php");
+include("register.inc.php")
 ?>

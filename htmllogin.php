@@ -1,19 +1,19 @@
 
 <?php 
-include("navBar.php")
+include("htmlnavBar.php")
 ?>
 <!DOCTYPE html>
 <html>
 <head>
 	<title>Connexion</title>
-    <link rel="stylesheet" type="text/css" href="login.css">
+    <link rel="stylesheet" type="text/css" href="htmllogin.css">
 </head>
 <body>
 
 
-<div w3-include-html="navBar.php.html"></div> 
+<div w3-include-html="htmlnavBar.php"></div> 
 <div>
-	<form action="login.php" method="POST">
+	<form action="accueil_connecte.php" method="POST">
 		<div class="titre">
 			<p>Connexion</p>
 			<br>
@@ -30,6 +30,6 @@ include("navBar.php")
 </body>
 
 <?php
-include("../connexion.inc.php")
+include("connexion.inc.php")
 ?>
 </html>
