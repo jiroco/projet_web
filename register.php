@@ -1,7 +1,3 @@
-<?php 
-include("htmlnavBar.php")
-?>
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -9,6 +5,9 @@ include("htmlnavBar.php")
     <link rel="stylesheet" type="text/css" href="register.css">
 </head>
 <body>
+
+<?php include("htmlnavBar.php")?>
+
 <div class="container">
 
       <form action="htmlpageAccueil.php" class="form-signin" method="POST">
@@ -27,7 +26,7 @@ include("htmlnavBar.php")
         <input id="inputUsername" class="form-control" placeholder="Username" required="" type="username">
 
         <label for="inputPassword" class="sr-only">Password</label>
-        <input id="inputPassword" class="form-control" placeholder="Password" required="" type="passwd">
+        <input id="inputPassword" class="form-control" placeholder="Password" required="" type="password">
 
         <div class="checkbox">
           <label>

@@ -13,3 +13,38 @@
     width: 200px;
     margin: auto;
 }
+.show-passwd {
+    height: auto;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 10px;
+    font-size: 16px;
+    width: 200px;
+    margin: auto;
+}
+
+.form-signin {
+
+    max-width: 330px;
+    padding: 15px;
+    margin: 0 auto;
+
+}
+
+.form-signin input[type="password"] {
+    margin-bottom: 10px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+    border: 0;
+}
