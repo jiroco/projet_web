@@ -1,6 +1,6 @@
 <?php
 session_start();
-$DBcon = new PDO('mysql:host=localhost;dbname=insatwitter;charset=utf8','root','root');
+include("connexiondb.php");
 
 if(isset($_POST['textpubliegroupe']) && !empty($_POST['textpubliegroupe']) && isset($_POST['clickgroupe']) ){
     

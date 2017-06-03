@@ -3,9 +3,6 @@ session_start();
 if ((!isset($_SESSION['id'])) || (empty($_SESSION['id']))){
     echo "<meta http-equiv='refresh' content='0; URL=index.php'>";
 }
-
-
-
 ?>
 
 <html>
@@ -64,8 +61,8 @@ if ((!isset($_SESSION['id'])) || (empty($_SESSION['id']))){
 					      		<br>
 					      		<div class="panel-group" id="addMessage" > <!--panel group debut-->
 									<?php
-									include("publication_abonnees.php");
-									include("publication_message.php");
+									include("include/publication_abonnees.php");
+									include("include/publication_message.php");
 									?>					      		  
 								</div> <!--panel group fin -->
 							</div><!--panel heading pour toutes les publications fin -->
@@ -91,10 +88,10 @@ if ((!isset($_SESSION['id'])) || (empty($_SESSION['id']))){
 						                    <tbody>
 						                      <tr>
 						                        <td>Department:</td>
-						                        <td>STI</td>
+						                        <td><?php print_r($_SESSION['departement']) ?></td>
 						                      </tr>
 						                      <tr>
-						                        <td>Nom :</td>
+						                        <td>Prénom et Nom :</td>
 						                        <td><?php print_r($_SESSION['prenom']." ".$_SESSION["nom"]) ?></td>
 						                      </tr>
 						                      <tr>
@@ -148,17 +145,16 @@ if ((!isset($_SESSION['id'])) || (empty($_SESSION['id']))){
 
 		        <div id="groupe" class="tab-pane fade"> <!--Groupe début -->
 		        	<div class="container">
-		        		<div class="panel-group"><!--panel group début -->
-						  	<div class="panel panel-default">
-						    	<div class="panel-heading"><h3>Mes groupes</h3></div>
-						    	<div class="panel-body">
-						    		<p>La liste de mes groupes ou les dernière publication des groupes</p>
-						    		<div>
-										Mes groupes: <?php include("mes_groupes.php");?>
-									</div>
-						    	</div>
-						  	</div>
-					  	</div><!--panel group fin -->
+
+					  	<div class="panel panel-default">
+					    	<div class="panel-heading"><h3>Mes groupes</h3></div>
+					    	<div class="panel-body">
+					    		<p>La liste de mes groupes ou les dernière publication des groupes</p>
+					    		<div>
+									Mes groupes: <?php include("include/mes_groupes.php");?>
+								</div>
+					    	</div>
+					  	</div>
 					</div>
 		        </div> <!-- Groupe fin -->
 			  
@@ -197,13 +193,13 @@ if ((!isset($_SESSION['id'])) || (empty($_SESSION['id']))){
 
 <!--
 	<div>
-		<br/>Mes messages : <?php include("mes_messages.php");?><br/>
+		<br/>Mes messages : <?php include("include/mes_messages.php");?><br/>
 	</div>
 
 	
 
 	<div>
-		mes groupes: <?php include("mes_groupes.php");?>
+		mes groupes: <?php include("include/mes_groupes.php");?>
 	</div>
 
 

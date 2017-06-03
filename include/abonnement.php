@@ -1,5 +1,5 @@
 <?php
-$DBcon = new PDO('mysql:host=localhost;dbname=insatwitter;charset=utf8','root','');
+include("connexiondb.php");
 
 if (isset($_POST["abonne"])){
 	$req = $DBcon->prepare('INSERT INTO `abonnee`(`IDUSER`, `IDUSERABONNE`) VALUES (?,?)');

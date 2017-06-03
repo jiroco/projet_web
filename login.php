@@ -14,5 +14,5 @@ include("head.php")
 
 
 <?php
-include("connexion.inc.php")
+include("include/connexion.inc.php")
 ?>
