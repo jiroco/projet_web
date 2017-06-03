@@ -37,7 +37,7 @@ if (empty($_POST['mail'])) {$_POST['mail']=NULL;}
 if (empty($_POST['nom'])) {$_POST['nom']=NULL;}
 if (empty($_POST['prenom'])) {$_POST['prenom']=NULL;}
 
-$DBcon = new PDO('mysql:host=localhost;dbname=insatwitter;charset=utf8','root','');
+$DBcon = new PDO('mysql:host=localhost;dbname=insatwitter;charset=utf8','root','root');
 if ($_POST['password'] != NULL) {
   $change = $DBcon->prepare('UPDATE user SET PASSWORD = ? WHERE ID = ?');
   $change->bindValue(1,sha1($_POST['password']),PDO::PARAM_INT);

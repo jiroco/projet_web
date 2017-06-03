@@ -2,7 +2,6 @@
 <html lang="en">
   <head>
     <title>About INSA'Twitter</title>
-    <link href="bootstrap/css/round-about.css" rel="stylesheet">
   </head>
 
   <body>
