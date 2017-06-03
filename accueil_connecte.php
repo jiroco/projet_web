@@ -11,6 +11,7 @@ if ((!isset($_SESSION['id'])) || (empty($_SESSION['id']))){
 <html>
 <head>
 	<title>Test</title>
+	<link href="bootstrap/css/offcanvas.css" rel="stylesheet">
 
 </head>
 <body >
@@ -19,10 +20,11 @@ if ((!isset($_SESSION['id'])) || (empty($_SESSION['id']))){
 
 
 	<div class="container">
-	  <div class="row">
+	  <div class="row ">
 
-			<nav class="col-md-2" > <!--nav vertical début -->
-		      <ul class="nav nav-pills nav-stacked " data-spy="affix" >
+			<nav class="col-md-2 sidebar-offcanvas" id="sidebar" > <!--nav vertical début -->
+
+		      <ul class="nav nav-pills nav-stacked "  data-spy="affix">
 		        <li class="active"><a data-toggle="tab"  href="#accueil">Accueil</a></li>
 		        <li><a data-toggle="tab" href="#profil">Profil</a></li>
 		        <li><a data-toggle="tab" href="#paramètre" >Paramètre</a></li>
@@ -34,10 +36,10 @@ if ((!isset($_SESSION['id'])) || (empty($_SESSION['id']))){
 
 
 			<div class="col-md-10" > <!--colonne 10 debut -->
+
 		      <div class="tab-content"> <!--tab content début -->
 		      	
 		      	<div id="accueil" class="tab-pane fade in active"> <!--Accueil début -->
-		        	<h3>Accueil</h3>					
 					<div class="container" style="width:100%;"> <!--container de publication début -->
 					    <div class="panel panel-default"> <!--Publier début -->
 					      <div class="panel-heading">
@@ -146,32 +148,43 @@ if ((!isset($_SESSION['id'])) || (empty($_SESSION['id']))){
 
 		        <div id="groupe" class="tab-pane fade"> <!--Groupe début -->
 		        	<div class="container">
-					  	<div class="panel panel-default">
-					    	<div class="panel-heading"><h3>Mes groupes</h3></div>
-					    	<div class="panel-body">
-					    		<p>La liste de mes groupes ou les dernière publication des groupes</p>
-					    		<div>
-									Mes groupes: <?php include("mes_groupes.php");?>
-								</div>
-					    	</div>
-					  	</div>
+		        		<div class="panel-group"><!--panel group début -->
+						  	<div class="panel panel-default">
+						    	<div class="panel-heading"><h3>Mes groupes</h3></div>
+						    	<div class="panel-body">
+						    		<p>La liste de mes groupes ou les dernière publication des groupes</p>
+						    		<div>
+										Mes groupes: <?php include("mes_groupes.php");?>
+									</div>
+						    	</div>
+						  	</div>
+					  	</div><!--panel group fin -->
 					</div>
 		        </div> <!-- Groupe fin -->
 			  
 
 		        <div id="abonne" class="tab-pane fade"> <!--Abonnés début -->
-		        	<div class="container">
-					  	<div class="panel panel-default">
-					    	<div class="panel-heading"><h3>Mes abonnés</h3></div>
-					    	<div class="panel-body">
-					    		<p>La liste de mes abonnés / leur dernière publication / recherche de nouveau pour s'abonner</p>
-					    		<div>
-									<a href="recherche_abonne.php"><span class="glyphicon glyphicon-search" ></span> Recherche d'abonné</a>
-				  				</div>
-					    	</div>
-					  	</div>
-					</div>
-
+		        	<div class="container" style="width:100%;"><!--container debut -->
+		        		<div class="panel-group"><!--panel group début -->
+						  	<div class="panel panel-default">
+						    	<div class="panel-heading">
+						    		<h3>Mes abonnés</h3>
+									<form class="navbar-form navbar-right">
+								      	<div class="form-group">
+								        	<input type="search" class="input-sm form-control" placeholder="Recherche">
+								        	<button type="submit" class="btn btn-primary btn-sm"><span class="glyphicon glyphicon-search"></span> rechercher</button>
+								      	</div>
+									</form>						    	
+								</div>
+						    	<div class="panel-body">
+						    		<p>La liste de mes abonnés / leur dernière publication / recherche de nouveau pour s'abonner</p>
+						    		<div>
+										<a href="recherche_abonne.php"><span class="glyphicon glyphicon-search" ></span> Recherche d'abonné</a>
+					  				</div>
+						    	</div>
+						  	</div>
+					  	</div><!--panel group fin -->
+					</div><!--container fin -->
 		        </div> <!-- Abonnés fin -->
 			  
 
@@ -204,5 +217,5 @@ if ((!isset($_SESSION['id'])) || (empty($_SESSION['id']))){
 
 
 
+<script src="bootstrap/js/offcanvas.js"></script>
 
-<script src="bootstrap/js/message.js"></script>
