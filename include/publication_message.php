@@ -1,5 +1,5 @@
 <?php
-$DBcon = new PDO('mysql:host=localhost;dbname=insatwitter;charset=utf8','root','root');
+include("connexiondb.php");
 
 if(isset($_POST['textpublie']) && !empty($_POST['textpublie']) && isset($_POST['click']) ){
 	$text=htmlspecialchars($_POST['textpublie']);

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Client :  127.0.0.1
--- Généré le :  Sam 13 Mai 2017 à 12:57
+-- Généré le :  Jeu 18 Mai 2017 à 08:28
 -- Version du serveur :  5.7.14
 -- Version de PHP :  5.6.25
 
@@ -54,6 +54,15 @@ CREATE TABLE `atog` (
   `IDGROUPE` int(11) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
+--
+-- Contenu de la table `atog`
+--
+
+INSERT INTO `atog` (`IDUSER`, `IDGROUPE`) VALUES
+(1, 1),
+(2, 1),
+(2, 2);
+
 -- --------------------------------------------------------
 
 --
@@ -62,10 +71,16 @@ CREATE TABLE `atog` (
 
 CREATE TABLE `groupe` (
   `ID` int(4) NOT NULL,
-  `NOM` varchar(256) NOT NULL,
-  `ABONNE` varchar(256) NOT NULL,
-  `MESSAGE` text NOT NULL
+  `NOM` varchar(256) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+--
+-- Contenu de la table `groupe`
+--
+
+INSERT INTO `groupe` (`ID`, `NOM`) VALUES
+(1, 'Les paras'),
+(2, 'les 3A');
 
 -- --------------------------------------------------------
 
@@ -91,6 +106,30 @@ INSERT INTO `messages` (`ID`, `IDUSER`, `CONTENU`) VALUES
 (5, 1, 'Bonjour à tous j\'espere que tout le monde va bien!!! ceci est un test de publication'),
 (6, 2, 'Ceci est un message test que l\'on fait avec david neyron'),
 (7, 9, 'Vous etes tous moche !');
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `messagetog`
+--
+
+CREATE TABLE `messagetog` (
+  `ID` int(4) NOT NULL,
+  `IDGROUPE` int(4) NOT NULL,
+  `MESSAGE` varchar(256) NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+--
+-- Contenu de la table `messagetog`
+--
+
+INSERT INTO `messagetog` (`ID`, `IDGROUPE`, `MESSAGE`) VALUES
+(1, 1, 'Ceci est un message de groupes'),
+(2, 1, 'voici le message de publication de groupe'),
+(3, 2, 'test Message 3A'),
+(4, 2, 'test2'),
+(6, 2, 'ceci est un test de message pour les 3A'),
+(7, 1, 'test de message pour paras');
 
 -- --------------------------------------------------------
 
@@ -147,6 +186,12 @@ ALTER TABLE `messages`
   ADD PRIMARY KEY (`ID`);
 
 --
+-- Index pour la table `messagetog`
+--
+ALTER TABLE `messagetog`
+  ADD PRIMARY KEY (`ID`);
+
+--
 -- Index pour la table `parametres`
 --
 ALTER TABLE `parametres`
@@ -166,12 +211,17 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT pour la table `groupe`
 --
 ALTER TABLE `groupe`
-  MODIFY `ID` int(4) NOT NULL AUTO_INCREMENT;
+  MODIFY `ID` int(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 --
 -- AUTO_INCREMENT pour la table `messages`
 --
 ALTER TABLE `messages`
-  MODIFY `ID` int(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `ID` int(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+--
+-- AUTO_INCREMENT pour la table `messagetog`
+--
+ALTER TABLE `messagetog`
+  MODIFY `ID` int(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 --
 -- AUTO_INCREMENT pour la table `user`
 --

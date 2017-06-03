@@ -1,6 +1,10 @@
 body {
   min-height: 200px;
   padding-top: 70px;
+
+  color:black;
+  background-color:white;
+  background-image:url();
 }
 
 .nomProjet:hover, .nomProjet{
@@ -13,6 +17,11 @@ body {
   	text-decoration: none;
 
 
+}
+
+#surligne:hover :focus{
+    background-color: #555;
+    color: white;
 }
 
 .affix {
