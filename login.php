@@ -12,22 +12,21 @@
 
 <div w3-include-html="htmlnavBar.php"></div> 
 <div>
-	<form action="htmlpageAccueil.php" class="form-signin" method="POST">
+	<form class="form-signin" method="POST">
 		<div class="titre">
 			<p>Connexion</p>
 			<br>
-			<input type="hidden" name="role"/>
-			<input id="inputusername" class="form-control" placeholder="username" required="" autofocus="" type="username" text="">
+			<input type="hidden"/>
+			<input name="username" id="username" class="form-control" placeholder="username" required="" autofocus="" type="username" text=""/>
 			<br>
-			<input id="inputpasswd" class="form-control" placeholder="passwd" required="" type="password"></span><br>
+			<input name="passwd" id="passwd" class="form-control" placeholder="passwd" required="" type="password"/><br>
 			<br>
-			<input type="submit" value="Connexion">
+			<input type="submit" value="Connexion"/>
 		</div>
 	</form>
 </div>
-</body>
 
-<?php
-include("connexion.inc.php")
-?>
+<?php include("include/connexion.inc.php")?>
+
+</body>
 </html>

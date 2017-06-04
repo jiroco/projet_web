@@ -20,7 +20,7 @@
         <input id="inputLastName" class="form-control" placeholder="Last Name" required="" autofocus="" type="nom">
 
         <label for="inputEmail" class="sr-only">Email address</label>
-        <input id="inputEmail" class="form-control" placeholder="Email address" required="" autofocus="" type="email">
+        <input id="email" class="form-control" placeholder="Email address" required="" autofocus="" type="email">
 
         <label for="inputUsername" class="sr-only">Username</label>
         <input id="inputUsername" class="form-control" placeholder="Username" required="" type="username">
