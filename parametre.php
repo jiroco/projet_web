@@ -47,32 +47,33 @@
                                 <tbody>
                                   <form class="" action="accueil_connecte.php" method="post">
                                   <tr>
-                                    <td>Changer votre mot de Passe</td>
-                                    <td><input type="text" name="username" value=""></td>
-                                    <td><input type="submit" value="Changer" class="btn btn-default"></td>
-                                    <br/>
-                                  </tr>
-                                  <tr>
-                                    <td>Changer votre Username</td>
-                                    <td><input type="text" name="username" value=""></td>
-                                    <td><input type="submit" value="Changer" class="btn btn-default"></td>
-                                    <br/>
-                                  </tr>
-                                  <tr>
-                                    <td>Changer votre E-mail</td>
-                                    <td><input type="text" name="mail" value=""></td>
-                                    <td><input type="submit" name="" value="changer" class="btn btn-default"></td>
-                                    <br/>
-                                  </tr>
-                                  <tr>
                                     <td>Changer votre Nom</td>
-                                    <td><input type="text" name="nom" value=""></td>
+                                    <td><input type="text" class="form-control" placeholder="Change surname..." name="nom" value=""></td>
                                     <td><input type="submit" value="Changer" class="btn btn-default"></td>
                                     <br/>
                                   </tr>
                                   <tr>
                                     <td>Changer votre Prénom</td>
-                                    <td><input type="text" name="prenom" value=""></td>
+                                    <td><input type="text" class="form-control" placeholder="Change firstname..." name="prenom" value=""></td>
+                                    <td><input type="submit" value="Changer" class="btn btn-default"></td>
+                                    <br/>
+                                  </tr>
+
+                                  <tr>
+                                    <td>Changer votre E-mail</td>
+                                    <td><input type="text" class="form-control" placeholder="Change e-mail..." name="mail" value=""></td>
+                                    <td><input type="submit" name="" value="changer" class="btn btn-default"></td>
+                                    <br/>
+                                  </tr>
+                                  <tr>
+                                    <td>Changer votre Username</td>
+                                    <td><input type="text" class="form-control" placeholder="Change username..." name="username" value=""></td>
+                                    <td><input type="submit" value="Changer" class="btn btn-default"></td>
+                                    <br/>
+                                  </tr>                                  
+                                  <tr>
+                                    <td>Changer votre mot de Passe</td>
+                                    <td><input type="text" class="form-control" placeholder="Change password..." name="username" value=""></td>
                                     <td><input type="submit" value="Changer" class="btn btn-default"></td>
                                     <br/>
                                   </tr>

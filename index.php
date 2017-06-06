@@ -33,8 +33,7 @@
   </head>
 
   <body>
-<?php include("htmlnavBar.php")?>
-
+<?php include("navbar_deconnecte.php");?>
     <div class="container">
       <div class="starter-template">
         <h1>INSA'Twitter</h1>
