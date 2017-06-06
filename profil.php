@@ -53,6 +53,14 @@
 						                    </tbody>
 						                  </table>
 						                </div>
+						                <div class="col-md-5 col-lg-5" align="center">
+                						<form method="post" enctype="multipart/form-data" action="upload.php">
+                							<label>Your Picture(PNG | max. 1 Mo):</label>
+                							<input type="hidden" name="MAX_FILE_SIZE" value="1048576" />
+                							<input type="file" id="pictureprofil" name="pictureprofil">
+                							<input type="submit" name="submit" value="Envoyer">
+                						</form>
+                					</div>
 					                </div> <!-- row fin -->
 							    </div> <!-- panel body  fin -->
 						    </div><!-- panel fin -->
