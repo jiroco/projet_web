@@ -26,7 +26,7 @@
 	</form>
 </div>
 
-<?php include("include/connexion.inc.php")?>
+<?php include("include/connexion.inc.php");?>
 
 </body>
 </html>

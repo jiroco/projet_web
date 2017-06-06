@@ -7,8 +7,11 @@ if ((!isset($_SESSION['id'])) || (empty($_SESSION['id']))){
 
 <html>
 <head>
-	<title>Test</title>
+	<title>INSA'twitter</title>
 	<link href="bootstrap/css/offcanvas.css" rel="stylesheet">
+	<meta charset="utf-8">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/handlebarsjs/4.0.8/handlebars.min.js"></script>
 
 </head>
 <body >
@@ -80,7 +83,8 @@ if ((!isset($_SESSION['id'])) || (empty($_SESSION['id']))){
 							    </div>
 							    <div class="panel-body"> <!-- panel body debut  -->
 									<div class="row"> <!-- row debut -->
-                						<div class="col-md-3 col-lg-3 " align="center"> <img alt="User Pic" src="http://babyinfoforyou.com/wp-content/uploads/2014/10/avatar-300x300.png" class="img-circle img-responsive"> 
+										
+                						<div class="col-md-3 col-lg-3 " align="center"> <img alt="User Pic" src="<?php echo "image/".$_SESSION['imgprofil'].".png"?>" class="img-circle img-responsive"> 
                 						</div>
                 					
 	                					<div class=" col-md-9 col-lg-9 "> 
