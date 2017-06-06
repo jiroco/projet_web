@@ -1,6 +1,7 @@
 <html>
 <head>
 	<title>Test</title>
+	<link rel="stylesheet" type="text/css" href="mes_groupes.css">
 
 </head>
 <body>
@@ -32,8 +33,7 @@
 					    	<div class="panel-heading"><h3>Mes groupes</h3></div>
 					    	<div class="panel-body">
 					    		<p>La liste de mes groupes ou les dernière publication des groupes</p>
-					    		<div>
-									Mes groupes: <?php include("include/mes_groupes.php");?>
+									<?php include("include/mes_groupes.php");?>
 								</div>
 					    	</div>
 					  	</div>

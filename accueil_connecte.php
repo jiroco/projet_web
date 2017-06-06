@@ -7,7 +7,7 @@ if ((!isset($_SESSION['id'])) || (empty($_SESSION['id']))){
 
 <html>
 <head>
-	<title>Test</title>
+	<title>Actualité</title>
 
 </head>
 <body >
