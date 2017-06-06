@@ -23,16 +23,11 @@
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav nav-tabs">
-            <li><a id="surligne" href="accueil_connecte.php">Home</a></li>
+            <li><a id="surligne" href="index.php">Home</a></li>
             <li><a href="htmlabout.php">About</a></li>
             <li><a href="htmlcontact.php">Contact</a></li>
           </ul>
-          <ul class="nav navbar-nav navbar-right"> <!-- button deconexion début-->
-            <li>
-              <a href="deconnexion.php" style="color: #CF0A1D;">
-                <span class="glyphicon glyphicon-off couleurINSA" ></span> Deconnexion</a>
-            </li>
-          </ul><!-- button deconexion fin-->
+
         </div>
       </div><!--Container fin -->
     </nav><!-- Fixed navbar fin -->

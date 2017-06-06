@@ -23,7 +23,7 @@
                   <h2 class="page-header">Our Team</h2>
               </div>
               <div class="col-lg-6 col-sm-6 text-center">
-                  <img class="img-circle img-responsive img-center" src="http://placehold.it/200x200" alt="">
+                  <img class="img-circle img-responsive img-center" src="image/jean.png" alt="">
                   <h3>Jean Savoldeli
                       <small>Backend</small>
                   </h3>
@@ -37,14 +37,14 @@
                   <p>What does this team member to? Keep it short! This is also a great spot for social links!</p><br/><br/>
               </div>
               <div class="col-lg-6 col-sm-6 text-center">
-                  <img class="img-circle img-responsive img-center" src="http://placehold.it/200x200" alt="">
+                  <img class="img-circle img-responsive img-center" src="image/aloise.png" alt="">
                   <h3>Aloïse Depelley
                       <small>Frontend</small>
                   </h3>
                   <p>What does this team member to? Keep it short! This is also a great spot for social links!</p><br/><br/>
               </div>
               <div class="col-lg-6 col-sm-6 text-center">
-                  <img class="img-circle img-responsive img-center" src="http://placehold.it/200x200" alt="">
+                  <img class="img-circle img-responsive img-center" src="image/david.png" alt="">
                   <h3>David Neyron
                       <small>Backend</small>
                   </h3>

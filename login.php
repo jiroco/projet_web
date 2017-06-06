@@ -8,7 +8,7 @@
 </head>
 <body>
 
-<?php include("htmlnavBar.php")?>
+<?php include("navbar_deconnecte.php");?>
 
 <div w3-include-html="htmlnavBar.php"></div> 
 <div>
@@ -19,14 +19,14 @@
 			<input type="hidden"/>
 			<input name="username" id="username" class="form-control" placeholder="username" required="" autofocus="" type="username" text=""/>
 			<br>
-			<input name="passwd" id="passwd" class="form-control" placeholder="passwd" required="" type="password"/><br>
+			<input name="passwd" id="passwd" class="form-control" placeholder="passwd" required="" type="password"/>
 			<br>
-			<input type="submit" value="Connexion"/>
+			<input type="submit" class="btn btn-default btn-lg" value="Connexion"/>
 		</div>
 	</form>
 </div>
 
-<?php include("include/connexion.inc.php")?>
+<?php include("include/connexion.inc.php");?>
 
 </body>
 </html>
