@@ -1,17 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
+
+
   <head>
-    <title>Barre de navigation</title>
     <?php include 'include_html.php';?>
 
   </head>
 
   <body>
-
-
-    <!-- Fixed navbar début-->
-    <nav class="navbar navbar-inverse navbar-fixed-top ">
-      <div class="container "><!--Container début -->
+ <!-- Fixed navbar -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
             <span class="sr-only">Toggle navigation</span>
@@ -23,9 +20,19 @@
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav nav-tabs">
-            <li><a id="surligne" href="accueil_connecte.php">Home</a></li>
-            <li><a href="htmlabout.php">About</a></li>
-            <li><a href="htmlcontact.php">Contact</a></li>
+            <li><a id="surligne" href="accueil_connecte.php">Accueil</a></li>
+            <li><a href="profil.php">Mon profil</a></li>
+            <li><a href="htmlgroupe.php">Mes groupes</a></li>
+            <li><a href="abonne.php">Mes abonnements</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Menu <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="htmlabout.php">About</a></li>
+                <li><a href="htmlcontact.php">Contacts</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="parametre.php">Paramètres</a></li>
+              </ul>
+            </li>
           </ul>
           <ul class="nav navbar-nav navbar-right"> <!-- button deconexion début-->
             <li>
@@ -33,10 +40,9 @@
                 <span class="glyphicon glyphicon-off couleurINSA" ></span> Deconnexion</a>
             </li>
           </ul><!-- button deconexion fin-->
-        </div>
-      </div><!--Container fin -->
-    </nav><!-- Fixed navbar fin -->
-    </div>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
 
 
 
@@ -48,4 +54,3 @@
     
 
   </body>
-</html>
