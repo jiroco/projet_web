@@ -54,4 +54,29 @@ footer {
 }
 
 
+.nav-pills-changer > .active > a > .badge
+ {
+  color: #CF0A1D;
+  background-color: #fff;
+}
+.nav-pills-changer > li > a > .badge {
+  margin-left: 3px;
+}
+.nav-pills-changer > li {
+  float: left;
+}
+.nav-pills-changer > li > a {
+  border-radius: 4px;
+  color: black;
+}
+.nav-pills-changer > li + li {
+  margin-left: 2px;
+}
+.nav-pills-changer > li.active > a,
+.nav-pills-changer > li.active > a:hover,
+.nav-pills-changer > li.active > a:focus {
+  color: #fff;
+  background-color: #CF0A1D;
+}
+
 
