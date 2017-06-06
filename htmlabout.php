@@ -7,13 +7,13 @@
   <body>
     <?php include 'htmlnavBar.php';?>
 
-    <div class="container">
+    <div class="container col-md-10 col-md-offset-1">
       <div class="row">
               <div class="col-lg-12">
                   <h1 class="page-header">About Us
                       <small>It's Nice to Meet You!</small>
                   </h1>
-                  <p>INSA'Twitter !!!!!</p>
+                  <p>Description INSA'Twitter </p>
               </div>
           </div>
 
@@ -49,10 +49,7 @@
                       <small>Backend</small>
                   </h3>
                   <p>What does this team member to? Keep it short! This is also a great spot for social links!</p><br/><br/>
-              </div>
-              
-              
-              
+              </div>              
           </div>
 
           <hr>
@@ -61,7 +58,8 @@
           <footer>
               <div class="row">
                   <div class="col-lg-12">
-                      <p>Copyright &copy; Your Website 2017</p>
+                      <p>Copyright &copy; INSA'Twitter 2017</p>
+
                   </div>
                   <!-- /.col-lg-12 -->
               </div>

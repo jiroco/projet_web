@@ -1,6 +1,7 @@
 body {
   min-height: 200px;
   padding-top: 70px;
+  font-size: 1px;
 
   color:black;
   background-color:white;
@@ -12,9 +13,9 @@ body {
  	float: left;
  	height: 50px;
  	padding: 15px 15px;
-  	font-size: 18px;
-  	line-height: 20px;
-  	text-decoration: none;
+  font-size: 18px;
+  line-height: 20px;
+  text-decoration: none;
 
 
 }
@@ -25,7 +26,7 @@ body {
 }
 
 .affix {
-      top: 80px;
+  top: 80px;
 }
 
 .couleurINSA{
@@ -78,5 +79,7 @@ footer {
   color: #fff;
   background-color: #CF0A1D;
 }
+
+
 
 

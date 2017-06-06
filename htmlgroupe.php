@@ -10,7 +10,7 @@
 
 
 
-	<div class="container">
+	<div class="container col-md-10 col-md-offset-1 ">
 	  <div class="row ">
 
 			<nav class="col-md-2 sidebar-offcanvas " > <!--nav vertical début -->
@@ -44,6 +44,7 @@
 
 
 		    </div><!--colonne 10 fin -->
+
 	  </div><!--row fin -->	   
 	</div><!--container fin -->
 
