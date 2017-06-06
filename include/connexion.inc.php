@@ -18,9 +18,6 @@ if (isset($_POST['username']) && !empty($_POST['username']) && isset($_POST['pas
                     $_SESSION['username']= $donnee['USERNAME'];
                     $_SESSION['departement']= $donnee['DEPARTEMENT'];
                     $_SESSION['imgprofil']=$donnee['IMAGE_PROFIL'];
-                    if ($donnee['IMAGE_PROFIL'] ==""){
-                        $_SESSION['imgprofil']="sansuser";
-                    }
                     echo "<meta http-equiv='refresh' content='0; URL=accueil_connecte.php'>";    
                 }
                 else

@@ -33,7 +33,7 @@
 							    </div>
 							    <div class="panel-body"> <!-- panel body debut  -->
 									<div class="row"> <!-- row debut -->
-                						<div class="col-md-3 col-lg-3 " align="center"> <img alt="User Pic" src="http://babyinfoforyou.com/wp-content/uploads/2014/10/avatar-300x300.png" class="img-circle img-responsive"> 
+                						<div class="col-md-3 col-lg-3 " align="center"> <img alt="User Pic" src="<?php echo "image/".$_SESSION['imgprofil'].".png"?>" class="img-circle img-responsive"> 
                 						</div>
                 					
 	                					<div class=" col-md-9 col-lg-9 "> 
