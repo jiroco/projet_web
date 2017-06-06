@@ -11,7 +11,7 @@ session_start();
 
 // destroy the session 
 	session_destroy();
-	echo "<meta http-equiv='refresh' content='0; URL=login.html'>";    
+	echo "<meta http-equiv='refresh' content='0; URL=index.php'>";    
 	?>
 
 </body>
