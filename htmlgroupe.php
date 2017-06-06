@@ -13,18 +13,6 @@
 	<div class="container col-md-10 col-md-offset-1 ">
 	  <div class="row ">
 
-			<nav class="col-md-2 sidebar-offcanvas " > <!--nav vertical début -->
-
-		      <ul class="nav nav-pills-changer nav-stacked "  data-spy="affix">
-		        <li><a  href="accueil_connecte.php">Accueil</a></li>
-		        <li><a href="profil.php">Profil</a></li>
-		        <li><a href="parametre.php" >Paramètre</a></li>
-		        <li class="active"><a href="htmlgroupe.php">Groupe</a></li>
-		        <li><a href="abonne.php">Mes abonnés</a></li>
-
-		      </ul>
-		    </nav> <!--nav vertical fin -->
-
 			<div class="col-md-10 col-md-offset-2" > <!--colonne 10 debut -->
 		        <div id="groupe" class="fade in active"> <!--Groupe début -->
 		        	<div class="container" style="width:100%;">
