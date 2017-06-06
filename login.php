@@ -1,18 +1,32 @@
-<?php 
-include("head.php") 
-?>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Connexion</title>
+    <link rel="stylesheet" type="text/css" href="login.css">
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js">
+</script>
+</head>
+<body>
 
+<?php include("htmlnavBar.php")?>
+
+<div w3-include-html="htmlnavBar.php"></div> 
 <div>
-	<form action="login.php" method="POST">
+	<form class="form-signin" method="POST">
+		<div class="titre">
 			<p>Connexion</p>
-			<input type="hidden" name="role"/>
-			Username :<input type="text" name="username" placeholder="Entrer votre username"/><br>
-			Password :<input type="password" name="passwd"  placeholder="Entrer votre mot de passe"/><br>
-			<input type="submit" value="Connexion">
+			<br>
+			<input type="hidden"/>
+			<input name="username" id="username" class="form-control" placeholder="username" required="" autofocus="" type="username" text=""/>
+			<br>
+			<input name="passwd" id="passwd" class="form-control" placeholder="passwd" required="" type="password"/><br>
+			<br>
+			<input type="submit" value="Connexion"/>
+		</div>
 	</form>
 </div>
 
+<?php include("include/connexion.inc.php")?>
 
-<?php
-include("include/connexion.inc.php")
-?>
+</body>
+</html>

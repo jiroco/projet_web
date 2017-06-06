@@ -26,7 +26,7 @@
 
 
     <!-- Fixed navbar début-->
-    <nav class="navbar navbar-default navbar-fixed-top ">
+    <nav class="navbar navbar-inverse navbar-fixed-top ">
       <div class="container "><!--Container début -->
         <div class="navbar-header">
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -61,7 +61,7 @@
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="bootstrap/js/message.js"></script>
+    
 
 
   </body>
