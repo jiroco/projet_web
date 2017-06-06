@@ -8,7 +8,7 @@
 </head>
 <body>
 
-<?php include("htmlnavBar.php");?>
+<?php include("navbar_deconnecte.php");?>
 
 <div w3-include-html="htmlnavBar.php"></div> 
 <div>
