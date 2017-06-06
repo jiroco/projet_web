@@ -30,7 +30,7 @@
                 <li><a href="htmlabout.php">About</a></li>
                 <li><a href="htmlcontact.php">Contacts</a></li>
                 <li role="separator" class="divider"></li>
-                <li><a href="parametre.php">Paramètres</a></li>
+                <li><a href="parametre.php"><span class="glyphicon glyphicon-cog"></span> Paramètres</a></li>
               </ul>
             </li>
           </ul>
