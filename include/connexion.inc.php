@@ -4,7 +4,7 @@ if (isset($_POST['username']) && !empty($_POST['username']) && isset($_POST['pas
         
         $username=htmlspecialchars($_POST['username']);
         $pass=htmlspecialchars(sha1($_POST['passwd']));
-        $req = $DBcon->prepare('SELECT ID, USERNAME, PASSWORD, MAIL, NOM, PRENOM, DEPARTEMENT from user WHERE USERNAME = ? ');
+        $req = $DBcon->prepare('SELECT ID, USERNAME, PASSWORD, MAIL, NOM, PRENOM, DEPARTEMENT, IMAGE_PROFIL from user WHERE USERNAME = ? ');
         $req->bindValue(1,$username,PDO::PARAM_STR);
         $check=$req->execute();  
         if($check){
@@ -17,6 +17,10 @@ if (isset($_POST['username']) && !empty($_POST['username']) && isset($_POST['pas
                     $_SESSION['prenom']=$donnee['PRENOM'];
                     $_SESSION['username']= $donnee['USERNAME'];
                     $_SESSION['departement']= $donnee['DEPARTEMENT'];
+                    $_SESSION['imgprofil']=$donnee['IMAGE_PROFIL'];
+                    if ($donnee['IMAGE_PROFIL'] ==""){
+                        $_SESSION['imgprofil']="sansuser";
+                    }
                     echo "<meta http-equiv='refresh' content='0; URL=accueil_connecte.php'>";    
                 }
                 else

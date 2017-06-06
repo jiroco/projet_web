@@ -7,7 +7,15 @@ if ((!isset($_SESSION['id'])) || (empty($_SESSION['id']))){
 
 <html>
 <head>
+<<<<<<< HEAD
 	<title>Test</title>
+=======
+	<title>INSA'twitter</title>
+	<link href="bootstrap/css/offcanvas.css" rel="stylesheet">
+	<meta charset="utf-8">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/handlebarsjs/4.0.8/handlebars.min.js"></script>
+>>>>>>> 88a4d2d44b0d29ca3dc4d48f99334fd4e57c68ad
 
 </head>
 <body >
@@ -67,8 +75,6 @@ if ((!isset($_SESSION['id'])) || (empty($_SESSION['id']))){
 					    </div><!--Twitt fin -->			    
 					</div> <!--container de publication fin -->
 				</div><!-- Acceuil fin -->
-		      
-
 			  
 
 			  </div> <!--tab content fin -->
