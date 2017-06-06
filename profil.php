@@ -15,10 +15,8 @@
 						    <div class="panel panel-default"><!-- panel debut -->
 							    <div class="panel-heading">
 							    	<h3>Mon Profil 
-							    		<small>
-							    			<div class='btn-toolbar pull-right '>
-						    					<input type="submit" class="btn btn-default" name="" value="Editer" >
-						      				</div>
+					    				<small class="pull-right">
+					    					<a href="parametre.php"><span class="glyphicon glyphicon-pencil"></span> Editer</a>
 						      			</small>
 						      		</h3>							    	
 							    </div>
