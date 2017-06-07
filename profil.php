@@ -6,30 +6,19 @@
 <body>
 	<?php include 'htmlnavBar.php'; ?>
 	<?php session_start();?>
-	<div class="container">
+	<div class="container container col-md-10 col-md-offset-1">
 	  <div class="row ">
-
-			<nav class="col-md-2 sidebar-offcanvas " > <!--nav vertical début -->
-
-		      <ul class="nav nav-pills-changer nav-stacked "  data-spy="affix">
-		        <li><a  href="accueil_connecte.php">Accueil</a></li>
-		        <li class="active"><a href="profil.php">Profil</a></li>
-		        <li><a href="parametre.php" >Paramètre</a></li>
-		        <li><a href="htmlgroupe.php">Groupe</a></li>
-		        <li><a href="abonne.php">Mes abonnés</a></li>
-
-		      </ul>
-		    </nav> <!--nav vertical fin -->
-
-			<div class="col-md-10 col-md-offset-2" > <!--colonne 10 debut -->
 		      
-
 		        <div id="profil" class="fade in active"> <!--profil début -->
 		        	<div class="container" style="width:100%;"> <!--container de profil début -->
 		        		<div class="panel-group"><!-- panel group debut -->
 						    <div class="panel panel-default"><!-- panel debut -->
 							    <div class="panel-heading">
-							    	<h3>Mon Profil</h3>
+							    	<h3>Mon Profil 
+					    				<small class="pull-right">
+					    					<a href="parametre.php"><span class="glyphicon glyphicon-pencil"></span> Editer</a>
+						      			</small>
+						      		</h3>							    	
 							    </div>
 							    <div class="panel-body"> <!-- panel body debut  -->
 									<div class="row"> <!-- row debut -->
@@ -77,8 +66,6 @@
 			        </div><!--container de profil fin -->
 		        </div> <!-- profil fin -->
 
-
-		    </div><!--colonne 10 fin -->
 	  </div><!--row fin -->	   
 	</div><!--container fin -->
 

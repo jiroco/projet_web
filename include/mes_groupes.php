@@ -9,7 +9,8 @@ if($check){
 	while ($resultat=$req->fetch()){
 		//$_SESSION["IDGROUPE"]=$resultat["ID"];
 		//print_r($resultat["ID"]);
-		echo ("<a href='groupe.php?Idgroupe=".$resultat['ID']."' name = 'groupe_valeur' value=".'$resultat["IDG"]'.">".$resultat["NOM"]." / ");
+		echo ("<a href='groupe.php?Idgroupe=".$resultat['ID']."' name = 'groupe_valeur' value=".'$resultat["IDG"]'.">".$resultat["NOM"]);
+		echo (" / ");
 	}
 }
 else
