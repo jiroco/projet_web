@@ -6,33 +6,31 @@
 </head>
 <body>
 
-<?php include("htmlnavBar.php")?>
+<?php include("navbar_deconnecte.php");?>
 
 <div class="container">
 
-      <form action="htmlpageAccueil.php" class="form-signin" method="POST">
+      <form action="include/register.inc.php" class="form-signin" method="POST">
         <h2 class="titre">Inscription</h2>
 
-        <label for="inputFisrtName" class="sr-only">First Name</label>
-        <input id="inputFisrtName" class="form-control" placeholder="First Name" required="" autofocus="" type="prenom">
+        <label for="inputFisrtName" class="sr-only">Prénom</label>
+        <input id="inputFisrtName" class="form-control" placeholder="Prénom" type="text", name="prenom">
 
-        <label for="inputLastName" class="sr-only">Name</label>
-        <input id="inputLastName" class="form-control" placeholder="Last Name" required="" autofocus="" type="nom">
+        <label for="inputLastName" class="sr-only">Nom</label>
+        <input id="inputLastName" class="form-control" placeholder="Nom" name="nom" type="nom">
+
+        <label for="inputdepartement" class="sr-only">Departement</label>
+        <input id="inputdepartement" class="form-control" placeholder="Departement" name="departement" type="text">
 
         <label for="inputEmail" class="sr-only">Email address</label>
-        <input id="email" class="form-control" placeholder="Email address" required="" autofocus="" type="email">
+        <input id="email" class="form-control" type="email" name="email" placeholder="Entrer votre adresse mail"/>
 
         <label for="inputUsername" class="sr-only">Username</label>
-        <input id="inputUsername" class="form-control" placeholder="Username" required="" type="username">
+        <input id="inputUsername" class="form-control" placeholder="Username" name="username" type="text">
 
         <label for="inputPassword" class="sr-only">Password</label>
-        <input id="inputPassword" class="form-control" placeholder="Password" required="" type="password">
+        <input id="inputPassword" class="form-control" placeholder="Password" name="passwd" type="password">
 
-        <div class="checkbox">
-          <label>
-            <input value="remember-me" type="checkbox"> Remember me
-          </label>
-        </div>
         <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
       </form>
 
@@ -40,5 +38,5 @@
 </body>
 </html>
 <?php
-include("register.inc.php")
+include("include/register.inc.php");
 ?>
