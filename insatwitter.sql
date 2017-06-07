@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Client :  127.0.0.1
--- Généré le :  Mar 06 Juin 2017 à 15:09
+-- Généré le :  Mer 07 Juin 2017 à 09:49
 -- Version du serveur :  5.7.14
 -- Version de PHP :  5.6.25
 
@@ -125,20 +125,21 @@ INSERT INTO `messages` (`ID`, `IDUSER`, `CONTENU`, `NOM`, `PRENOM`, `IMAGE`) VAL
 CREATE TABLE `messagetog` (
   `ID` int(4) NOT NULL,
   `IDGROUPE` int(4) NOT NULL,
-  `MESSAGE` varchar(256) NOT NULL
+  `MESSAGE` varchar(256) NOT NULL,
+  `NOM` varchar(256) NOT NULL,
+  `PRENOM` varchar(256) NOT NULL,
+  `IMAGE` varchar(256) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
 -- Contenu de la table `messagetog`
 --
 
-INSERT INTO `messagetog` (`ID`, `IDGROUPE`, `MESSAGE`) VALUES
-(1, 1, 'Ceci est un message de groupes'),
-(2, 1, 'voici le message de publication de groupe'),
-(3, 2, 'test Message 3A'),
-(4, 2, 'test2'),
-(6, 2, 'ceci est un test de message pour les 3A'),
-(7, 1, 'test de message pour paras');
+INSERT INTO `messagetog` (`ID`, `IDGROUPE`, `MESSAGE`, `NOM`, `PRENOM`, `IMAGE`) VALUES
+(3, 2, 'test Message 3A', '', '', ''),
+(4, 2, 'test2', '', '', ''),
+(6, 2, 'ceci est un test de message pour les 3A', '', '', ''),
+(10, 1, 'test de message de groupe', 'Neyron', 'David', 'dneyron');
 
 -- --------------------------------------------------------
 
@@ -228,12 +229,12 @@ ALTER TABLE `groupe`
 -- AUTO_INCREMENT pour la table `messages`
 --
 ALTER TABLE `messages`
-  MODIFY `ID` int(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+  MODIFY `ID` int(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
 --
 -- AUTO_INCREMENT pour la table `messagetog`
 --
 ALTER TABLE `messagetog`
-  MODIFY `ID` int(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `ID` int(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 --
 -- AUTO_INCREMENT pour la table `user`
 --
