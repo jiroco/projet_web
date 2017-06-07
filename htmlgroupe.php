@@ -15,11 +15,13 @@
         	<div class="container" style="width:100%;">
 
 			  	<div class="panel panel-default">
-			    	<div class="panel-heading"><h3>Mes groupes</h3></div>
+			    	<div class="panel-heading">
+			    		<h3>Mes groupes</h3>
+			    		<span class="glyphicon icon-group"></span>
+			    	</div>
 			    	<div class="panel-body">
-			    		<p>La liste de mes groupes ou les dernière publication des groupes</p>
 						<div>	
-							mes groupes : <?php include("include/mes_groupes.php");?>
+							<?php include("include/mes_groupes.php");?>
 						</div>
 			    	</div>
 				</div>
