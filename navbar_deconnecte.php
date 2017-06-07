@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
     <title>Barre de navigation</title>
     <?php include 'include_html.php';?>
