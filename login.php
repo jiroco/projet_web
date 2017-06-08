@@ -6,7 +6,6 @@
 <body>
 
 <?php include("navbar_deconnecte.php");?>
-
 <div w3-include-html="htmlnavBar.php"></div> 
 <div>
 	<form class="form-signin" method="POST">

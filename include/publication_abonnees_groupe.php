@@ -14,7 +14,7 @@ if($check){
 			      	<img src="<?php echo "image/".$resultat['IMAGE'].".png"?>" class="media-object" style="width:100px;margin-top: 10px; margin-left: 10px;margin-bottom: 10px;"> <!--mettre une image de profil dans src -->
 				</div>
 				<div class="media-body">
-				    <h4 class="media-heading"><br/> <?php print_r($resultat["GROUPE"]) ?> </h4>
+				    <h4 class="media-heading"><br/> <?php print_r($resultat["NOM"]) ?> </h4>
 		<?php print_r($resultat["MESSAGE"]."<br/>");?>
 				<br/>
 				</div>
