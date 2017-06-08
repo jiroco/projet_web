@@ -18,7 +18,7 @@ if($check){ ?>
 	  <?php while ($resultat=$req->fetch()){
 		//$_SESSION["IDGROUPE"]=$resultat["ID"];
 		//print_r($resultat["ID"]);?>
-			<?php echo ("<a href='groupe.php?Idgroupe=".$resultat['ID']."' name='groupe_valeur' value='".$resultat["IDG"]."'' class='list-group-item'".">".$resultat["NOM"]."</a>"); ?>   
+			<?php echo ("<a href='groupe.php?Idgroupe=".$resultat['ID']."' name='groupe_valeur' value='".$resultat["ID"]."'' class='list-group-item'".">".$resultat["NOM"]."</a>"); ?>   
 
 <a href=""></a>
 

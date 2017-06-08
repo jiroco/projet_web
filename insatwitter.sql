@@ -135,23 +135,23 @@ INSERT INTO `messages` (`ID`, `IDUSER`, `CONTENU`, `NOM`, `PRENOM`, `IMAGE`, `TH
 --
 
 CREATE TABLE `messagetog` (
-  `ID` int(4) NOT NULL,
-  `IDGROUPE` int(4) NOT NULL,
-  `MESSAGE` varchar(256) NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
-
+    `ID` int(4) NOT NULL,
+    `IDGROUPE` int(4) NOT NULL,
+    `MESSAGE` varchar(256) NOT NULL,
+    `NOM` varchar(256) NOT NULL,
+    `PRENOM` varchar(256) NOT NULL,
+    `IMAGE` varchar(256) NOT NULL
+  ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 --
 -- Contenu de la table `messagetog`
 --
 
-INSERT INTO `messagetog` (`ID`, `IDGROUPE`, `MESSAGE`) VALUES
-(1, 1, 'Ceci est un message de groupes'),
-(2, 1, 'voici le message de publication de groupe'),
-(3, 2, 'test Message 3A'),
-(4, 2, 'test2'),
-(6, 2, 'ceci est un test de message pour les 3A'),
-(7, 1, 'test de message pour paras');
-
+INSERT INTO `messagetog` (`ID`, `IDGROUPE`, `MESSAGE`, `NOM`, `PRENOM`, `IMAGE`) VALUES
+ (3, 2, 'test Message 3A', '', '', ''),
+ (4, 2, 'test2', '', '', ''),
+ (6, 2, 'ceci est un test de message pour les 3A', '', '', ''),
+ (10, 1, 'test de message de groupe', 'Neyron', 'David', 'dneyron');
+  
 -- --------------------------------------------------------
 
 --
