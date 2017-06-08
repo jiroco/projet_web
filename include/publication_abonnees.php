@@ -1,10 +1,10 @@
 <?php
 include("connexiondb.php");
 
-$req = $DBcon->prepare('SELECT CONTENU, NOM, PRENOM, IMAGE from messages WHERE IDUSER IN (SELECT `IDUSERABONNE` FROM `abonnee` WHERE `IDUSER`=?) or IDUSER=? GROUP BY ID DESC '); 
+$req = $DBcon->prepare('SELECT ID, CONTENU, NOM, PRENOM, IMAGE from messages WHERE IDUSER IN (SELECT `IDUSERABONNE` FROM `abonnee` WHERE `IDUSER`=?) or IDUSER=? GROUP BY ID DESC ');
 $req->bindValue(1,$_SESSION['id'],PDO::PARAM_INT);
 $req->bindValue(2,$_SESSION['id'],PDO::PARAM_INT);
-$check=$req->execute(); 
+$check=$req->execute();
 if($check){
 	while ($resultat=$req->fetch()){
 		?>
@@ -15,10 +15,13 @@ if($check){
 				</div>
 				<div class="media-body">
 				    <h4 class="media-heading"><br/> <?php print_r($resultat["NOM"]." ".$resultat['PRENOM']) ?> </h4>
-				    	<?php 
+							<?php
 							print_r($resultat["CONTENU"]."<br/>");
-						?>
-				    <br/>
+							?>
+						<br/>
+						<input id="<?php echo $resultat["ID"]; ?>" class="jaimeb" type="button" value="J'aime">
+						<label id="<?php echo -$resultat["ID"]; ?>"> Nombre de J'aime : </label>
+					<br/>
 				</div>
 			</div>
    		</div> <!--panel 1 fin-->
