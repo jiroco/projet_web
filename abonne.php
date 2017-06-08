@@ -1,6 +1,7 @@
 <html>
 <head>
-	<title>Test</title>
+	<title>Abonne</title>
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js" type="text/javascript"></script>
 
 </head>
 <body>
@@ -19,7 +20,7 @@
 					    		<h3>Rechercher abonnés</h3>					    	
 							</div>
 					    	<div class="panel-body">
-								<form action="recherche_abonne.php" method="POST">
+								<form action="abonne.php" method="POST">
 									<input type="text" name="recherchea" placeholder="Pseudo de l'abonne"/>
 									<button type="submit" class="btn btn-primary btn-sm"><span class="glyphicon glyphicon-search"></span> Rechercher</button>
 								</form>
@@ -37,5 +38,7 @@ include("include/recherche_abonne.inc.php");
 	</div><!--container fin -->
 
 
+<?php
+include("include/abonnement.php");?>
 </body>
 </html>
