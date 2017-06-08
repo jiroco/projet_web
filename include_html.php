@@ -8,8 +8,8 @@
 	    <link href="bootstrap/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
 
 	    <!-- Custom styles for this template -->
-	    <link href="bootstrap/css/navBar.css" rel="stylesheet">
-	    <link href="bootstrap/css/offcanvas.css" rel="stylesheet">
+	    <link href="bootstrap/css/navBar.css" rel="stylesheet" type="text/css">
+	    <link href="bootstrap/css/offcanvas.css" rel="stylesheet" type="text/css">
     	<link href="bootstrap/css/starter-template.css" rel="stylesheet">
     	<link rel="stylesheet" type="text/css" href="register.css">
     	<link rel="stylesheet" type="text/css" href="login.css">

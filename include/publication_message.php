@@ -2,7 +2,8 @@
 include("connexiondb.php");
 
 if(isset($_POST['textpublie']) && !empty($_POST['textpublie']) && isset($_POST['click']) ){
-	$text=htmlspecialchars($_POST['textpublie']);
+	
+    $text=htmlspecialchars($_POST['textpublie']);
 	
 	$req = $DBcon->prepare('INSERT INTO `messages`(`ID`, `IDUSER`, `CONTENU`, `NOM`,`PRENOM`,`IMAGE`) VALUES (NULL,?,?,?,?,?)');
 					

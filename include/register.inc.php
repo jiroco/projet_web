@@ -1,8 +1,8 @@
 <?php
 include("connexiondb.php");
-
 if(isset($_POST['email']) && !empty($_POST['email']) && isset($_POST['prenom']) && !empty($_POST['prenom']) && isset($_POST['nom']) && !empty($_POST['nom']) && isset($_POST['passwd']) && !empty($_POST['passwd']) && isset($_POST['username']) && !empty($_POST['username'])){
-	$email=htmlspecialchars($_POST['email']);
+
+    $email=htmlspecialchars($_POST['email']);
 	$nom=htmlspecialchars($_POST['nom']);
     $prenom=htmlspecialchars($_POST['prenom']);
     $passwd=htmlspecialchars($_POST['passwd']);
@@ -21,7 +21,7 @@ if(isset($_POST['email']) && !empty($_POST['email']) && isset($_POST['prenom']) 
     $check=$req->execute();
     
     if($check){
-        include("connexion.inc.php");
+        echo "<meta http-equiv='refresh' content='0; URL=../login.php'>";    
     }
     else
         echo "Un problème s'est produit lors de la requete.<br>";

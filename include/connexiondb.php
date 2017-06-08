@@ -1,3 +1,5 @@
 <?php
-$DBcon = new PDO('mysql:host=localhost;dbname=insatwitter;charset=utf8','CH','ch');
+
+$DBcon = new PDO('mysql:host=localhost;dbname=insatwitter;charset=utf8','root','');
+
 ?>
