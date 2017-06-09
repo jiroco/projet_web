@@ -43,11 +43,7 @@
 							                  <tr>
 							                    <td>Email</td>
 							                    <td><a href="mailto:"><?php print_r($_SESSION['mail']) ?></a></td>
-							                  </tr>
-							                    <td>Phone Number</td>
-							                    <td>123-4567-890(Landline)<br><br>555-4567-890(Mobile)</td>						                           
-						                      </tr>
-						                     
+						                     </tr>
 						                    </tbody>
 						                  </table>
 						                </div>
