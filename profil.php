@@ -1,6 +1,6 @@
 <html>
 <head>
-	<title>Test</title>
+	<title>Profil</title>
 
 </head>
 <body>
