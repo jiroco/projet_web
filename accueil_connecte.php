@@ -7,7 +7,7 @@ if ((!isset($_SESSION['id'])) || (empty($_SESSION['id']))){
 
 <html>
 <head>
-	<title>Publication</title>
+	<title>Test</title>
 
 </head>
 <body >
@@ -17,6 +17,19 @@ if ((!isset($_SESSION['id'])) || (empty($_SESSION['id']))){
 
 	<div class="container">
 	  <div class="row ">
+
+			<nav class="col-md-2 sidebar-offcanvas " > <!--nav vertical début -->
+
+		      <ul class="nav nav-pills-changer nav-stacked "  data-spy="affix">
+		        <li class="active"><a  href="accueil_connecte.php">Accueil</a></li>
+		        <li><a href="profil.php">Profil</a></li>
+		        <li><a href="parametre.php" >Paramètre</a></li>
+		        <li><a href="htmlgroupe.php">Groupe</a></li>
+		        <li><a href="abonne.php">Mes abonnés</a></li>
+
+		      </ul>
+		    </nav> <!--nav vertical fin -->
+
 
 			<div class="col-md-10 col-md-offset-2" > <!--colonne 10 debut -->
 
@@ -66,7 +79,7 @@ if ((!isset($_SESSION['id'])) || (empty($_SESSION['id']))){
                           type: 'POST',
                           data: dataObject,
                         	success: function(data) {
-                            $("#" + -id_message).html("Nombre de J'aime : " + data);
+                            $("#" + -id_message).html(" J'aime : " + data);
                         	},
                         	error: function() {
                         		$("#" + -id_message).html(0);

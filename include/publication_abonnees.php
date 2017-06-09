@@ -1,7 +1,7 @@
 <?php
 include("connexiondb.php");
 
-$req = $DBcon->prepare('SELECT ID, CONTENU, NOM, PRENOM, IMAGE from messages WHERE IDUSER IN (SELECT `IDUSERABONNE` FROM `abonnee` WHERE `IDUSER`=?) or IDUSER=? GROUP BY ID DESC ');
+$req = $DBcon->prepare('SELECT THUMBSUP, ID, CONTENU, NOM, PRENOM, IMAGE from messages WHERE IDUSER IN (SELECT `IDUSERABONNE` FROM `abonnee` WHERE `IDUSER`=?) or IDUSER=? GROUP BY ID DESC ');
 $req->bindValue(1,$_SESSION['id'],PDO::PARAM_INT);
 $req->bindValue(2,$_SESSION['id'],PDO::PARAM_INT);
 $check=$req->execute();
@@ -20,7 +20,7 @@ if($check){
 							?>
 						<br/>
 						<input id="<?php echo $resultat["ID"]; ?>" class="jaimeb" type="button" value="J'aime">
-						<label id="<?php echo -$resultat["ID"]; ?>"> Nombre de J'aime : </label>
+						<label id="<?php echo -$resultat["ID"]; ?>"> J'aime : <?php echo $resultat["THUMBSUP"]; ?> </label>
 					<br/>
 				</div>
 			</div>
