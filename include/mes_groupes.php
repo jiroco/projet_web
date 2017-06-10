@@ -24,7 +24,7 @@ if($check){ ?>
 </div>
 
 <?php
-}}
+}
 else
 	echo "Erreur de requete.<br>";
 ?>
