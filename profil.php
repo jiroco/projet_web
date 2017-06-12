@@ -1,3 +1,11 @@
+<?php
+session_start();
+if ((!isset($_SESSION['id'])) || (empty($_SESSION['id']))){
+    echo "<meta http-equiv='refresh' content='0; URL=index.php'>";
+}
+?>
+
+
 <html>
 <head>
 	<title>Profil</title>
@@ -5,7 +13,6 @@
 </head>
 <body>
 	<?php include 'htmlnavBar.php'; ?>
-	<?php session_start();?>
 	<div class="container col-md-10 col-md-offset-1">
 	  <div class="row ">
 		      
