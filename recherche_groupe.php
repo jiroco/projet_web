@@ -12,7 +12,6 @@ if ((!isset($_SESSION['id'])) || (empty($_SESSION['id']))){
 </head>
 <body>
 	<?php include 'htmlnavBar.php'; ?>
-	<?php session_start();?>
 
 
 
@@ -23,7 +22,7 @@ if ((!isset($_SESSION['id'])) || (empty($_SESSION['id']))){
 	        		<div class="panel-group"><!--panel group début -->
 					  	<div class="panel panel-default">
 					    	<div class="panel-heading">
-					    		<h3>Rechercher de groupe</h3>					    	
+					    		<h3>Rechercher de groupe</h3>
 							</div>
 					    	<div class="panel-body">
 								<form action="recherche_groupe.php" method="POST">
@@ -40,9 +39,9 @@ include("include/abonnement_groupe.php");
 						  	</div>
 					  	</div><!--panel group fin -->
 					</div><!--container fin -->
-		        </div> <!-- Abonnés fin -->      
+		        </div> <!-- Abonnés fin -->
 
-		  </div><!--row fin -->	   
+		  </div><!--row fin -->
 	</div><!--container fin -->
 
 </body>
