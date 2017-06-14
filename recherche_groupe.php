@@ -34,6 +34,7 @@ if ((!isset($_SESSION['id'])) || (empty($_SESSION['id']))){
 
 <?php
 include("include/recherche_groupe.inc.php");
+include("include/abonnement_groupe.php");
 ?>
 						    	</div>
 						  	</div>
@@ -44,8 +45,5 @@ include("include/recherche_groupe.inc.php");
 		  </div><!--row fin -->	   
 	</div><!--container fin -->
 
-
-<?php
-include("include/abonnement_groupe.php");?>
 </body>
 </html>
