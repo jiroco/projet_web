@@ -27,7 +27,7 @@ if ((!isset($_SESSION['id'])) || (empty($_SESSION['id']))){
 					    	<div class="panel-body">
 								<form action="recherche_groupe.php" method="POST">
 
-									<input type="text" name="rechercheag" placeholder="Nom de groupe"/><br>
+									<input type="text" name="rechercheag" placeholder="Nom de groupe"/>
 									<button type="submit" class="btn btn-primary btn-sm"><span class="glyphicon glyphicon-search"></span> Rechercher</button>
 								</form>
 

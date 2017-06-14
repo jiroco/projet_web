@@ -18,8 +18,10 @@ if($check){
 				    <h4 class="media-heading"><br/> <?php print_r($resultat["NOM"]." ".$resultat["PRENOM"]) ?> </h4>
 							<?php print_r($resultat["MESSAGE"]."<br/>");?>
 						<br/>
-						<input id="<?php echo $resultat["ID"]; ?>" class="jaimeb" type="button" value="J'aime">
-						<label id="<?php echo -$resultat["ID"]; ?>"> J'aime : <?php echo $resultat["THUMBSUP"]; ?> </label>
+						<button id="<?php echo $resultat["ID"]; ?>" class="jaimeb btn btn-default btn-xs" type="button" value="J'aime">
+						    <span class="glyphicon glyphicon-thumbs-up"></span> J'aime
+						</button> <!-- fin button j'aime avec le pouce !!!-->
+						<span class="label label-info" id="<?php echo -$resultat["ID"]; ?>"><?php echo $resultat["THUMBSUP"]; ?></span>
 					<br/>
 				</div>
 			</div>
