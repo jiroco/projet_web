@@ -3,7 +3,6 @@ session_start();
 if ((!isset($_SESSION['id'])) || (empty($_SESSION['id']))){
     echo "<meta http-equiv='refresh' content='0; URL=index.php'>";
 }
-
 $_SESSION["IDGROUPE"]=$_GET["Idgroupe"];
 ?>
 
@@ -23,7 +22,7 @@ $_SESSION["IDGROUPE"]=$_GET["Idgroupe"];
 					      	<h3>Publier</h3>
 					      	<form action="include/publication_message_groupe.php" method="POST">
 							    <div class="form-group ">
-							      <label for="comment">Comment :</label>
+							      <label for="comment">Message :</label>
 							      <textarea class="form-control taille-textarea" rows="5" id="comment" type="text" name="textpubliegroupe" placeholder="Entrer votre texte"></textarea><br/>
 							      <div class='btn-toolbar pull-right '>
 							    	<input type="submit" class="btn btn-default btn-xs button-bas-droite" name="clickgroupe" value="publier">

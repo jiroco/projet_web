@@ -5,7 +5,7 @@ if ((!isset($_SESSION['id'])) || (empty($_SESSION['id']))){
     <!DOCTYPE html>
     <html lang="fr">
       <head>
-        <title>About INSA'Twitter</title>
+        <title>A propos INSA'Twitter</title>
       </head>
 
       <body>
@@ -14,10 +14,9 @@ if ((!isset($_SESSION['id'])) || (empty($_SESSION['id']))){
         <div class="container col-md-10 col-md-offset-1">
           <div class="row">
                   <div class="col-lg-12">
-                      <h1 class="page-header">About Us
+                      <h1 class="page-header">A propos :
                           <small>Rencontrons nous!</small>
                       </h1>
-                      <p>Description INSA'Twitter </p>
                   </div>
               </div>
 
@@ -81,7 +80,7 @@ else{
   ?>
  <html lang="fr">
   <head>
-    <title>About INSA'Twitter</title>
+    <title>A propos INSA'Twitter</title>
   </head>
 
   <body>
@@ -90,17 +89,16 @@ else{
     <div class="container col-md-10 col-md-offset-1">
       <div class="row">
               <div class="col-lg-12">
-                  <h1 class="page-header">About Us
+                  <h1 class="page-header">A propos :
                       <small>Rencontrons nous!</small>
                   </h1>
-                  <p>Description INSA'Twitter </p>
               </div>
           </div>
 
           <!-- Team Members Row -->
           <div class="row">
               <div class="col-lg-12">
-                  <h2 class="page-header">Our Team</h2>
+                  <h2 class="page-header">Notre équipe</h2>
               </div>
               <div class="col-lg-6 col-sm-6 text-center">
                   <img class="img-circle img-responsive img-center" src="image/jean.png" alt="">

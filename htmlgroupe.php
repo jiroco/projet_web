@@ -1,6 +1,6 @@
 <html>
 <head>
-	<title>Test</title>
+	<title>Mes groupes</title>
 
 </head>
 <body style="height:100%">
@@ -19,11 +19,22 @@
 			    		<h3>Mes groupes</h3>
 			    		<span class="glyphicon icon-group"></span>
 			    	</div>
+
 			    	<div class="panel-body">
 						<div>	
 							<?php include("include/mes_groupes.php");?>
 						</div>
 			    	</div>
+
+
+					<div class="panel-body">
+						<a href='recherche_groupe.php'>Recherche de groupe</a>
+					</div>
+					<div class="panel-body">
+						<a href='creer_groupe.php'>Créer un groupe</a>
+					</div>
+
+
 				</div>
 			</diov>
 		</div> <!-- Groupe fin -->		      
