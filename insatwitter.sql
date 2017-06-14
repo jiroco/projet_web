@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Client :  127.0.0.1
--- Généré le :  Jeu 08 Juin 2017 à 08:40
+-- Généré le :  Mar 13 Juin 2017 à 08:56
 -- Version du serveur :  5.7.14
 -- Version de PHP :  5.6.25
 
@@ -55,6 +55,37 @@ CREATE TABLE `aime` (
   `ID_USER` int(11) NOT NULL,
   `ID_MESSAGE` int(11) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+--
+-- Contenu de la table `aime`
+--
+
+INSERT INTO `aime` (`ID_USER`, `ID_MESSAGE`) VALUES
+(2, 13),
+(2, 12),
+(2, 20),
+(1, 20);
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `aimeg`
+--
+
+CREATE TABLE `aimeg` (
+  `ID_USER` int(11) NOT NULL,
+  `ID_MESSAGE` int(11) NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+--
+-- Contenu de la table `aimeg`
+--
+
+INSERT INTO `aimeg` (`ID_USER`, `ID_MESSAGE`) VALUES
+(2, 6),
+(2, 4),
+(1, 10),
+(2, 10);
 
 -- --------------------------------------------------------
 
@@ -123,10 +154,10 @@ INSERT INTO `messages` (`ID`, `IDUSER`, `CONTENU`, `NOM`, `PRENOM`, `IMAGE`, `TH
 (5, 1, 'Bonjour à tous j\'espere que tout le monde va bien!!! ceci est un test de publication', 'Savoldelli', 'Jean', 'jiroco', 0),
 (6, 2, 'Ceci est un message test que l\'on fait avec david neyron', 'Neyron', 'David', 'dneyron', 0),
 (7, 9, 'Vous etes tous moche !', 'abdallah', 'yanis', 'sansuser', 0),
-(12, 2, 'bonjour c\'est moi david', 'Neyron', 'David', 'dneyron', 0),
-(13, 10, 'coucou c\'est mon premier jour dessus :)', 'Aublet', 'Marine', 'sansuser', 0),
+(12, 2, 'bonjour c\'est moi david', 'Neyron', 'David', 'dneyron', 1),
+(13, 10, 'coucou c\'est mon premier jour dessus :)', 'Aublet', 'Marine', 'sansuser', 1),
 (19, 2, 'essaie pour yanis', 'Neyron', 'David', 'dneyron', 0),
-(20, 2, 'coucou', 'Neyron', 'David', 'dneyron', 0);
+(20, 2, 'coucou', 'Neyron', 'David', 'dneyron', 2);
 
 -- --------------------------------------------------------
 
@@ -135,23 +166,25 @@ INSERT INTO `messages` (`ID`, `IDUSER`, `CONTENU`, `NOM`, `PRENOM`, `IMAGE`, `TH
 --
 
 CREATE TABLE `messagetog` (
-    `ID` int(4) NOT NULL,
-    `IDGROUPE` int(4) NOT NULL,
-    `MESSAGE` varchar(256) NOT NULL,
-    `NOM` varchar(256) NOT NULL,
-    `PRENOM` varchar(256) NOT NULL,
-    `IMAGE` varchar(256) NOT NULL
-  ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+  `ID` int(4) NOT NULL,
+  `IDGROUPE` int(4) NOT NULL,
+  `MESSAGE` varchar(256) NOT NULL,
+  `NOM` varchar(256) NOT NULL,
+  `PRENOM` varchar(256) NOT NULL,
+  `IMAGE` varchar(256) NOT NULL,
+  `THUMBSUP` int(11) NOT NULL DEFAULT '0'
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
 --
 -- Contenu de la table `messagetog`
 --
 
-INSERT INTO `messagetog` (`ID`, `IDGROUPE`, `MESSAGE`, `NOM`, `PRENOM`, `IMAGE`) VALUES
- (3, 2, 'test Message 3A', '', '', ''),
- (4, 2, 'test2', '', '', ''),
- (6, 2, 'ceci est un test de message pour les 3A', '', '', ''),
- (10, 1, 'test de message de groupe', 'Neyron', 'David', 'dneyron');
-  
+INSERT INTO `messagetog` (`ID`, `IDGROUPE`, `MESSAGE`, `NOM`, `PRENOM`, `IMAGE`, `THUMBSUP`) VALUES
+(3, 2, 'test Message 3A', '', '', '', 0),
+(4, 2, 'test2', '', '', '', 1),
+(6, 2, 'ceci est un test de message pour les 3A', '', '', '', 1),
+(10, 1, 'test de message de groupe', 'Neyron', 'David', 'dneyron', 2);
+
 -- --------------------------------------------------------
 
 --
@@ -245,7 +278,7 @@ ALTER TABLE `messages`
 -- AUTO_INCREMENT pour la table `messagetog`
 --
 ALTER TABLE `messagetog`
-  MODIFY `ID` int(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `ID` int(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 --
 -- AUTO_INCREMENT pour la table `user`
 --

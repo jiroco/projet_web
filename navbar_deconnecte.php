@@ -23,7 +23,7 @@
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav nav-tabs">
-            <li><a id="surligne" href="index.php">Home</a></li>
+            <li><a id="surligne" href="index.php">Accueil</a></li>
             <li><a href="htmlabout.php">About</a></li>
             <li><a href="htmlcontact.php">Contact</a></li>
           </ul>

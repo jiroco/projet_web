@@ -17,24 +17,8 @@ if ((!isset($_SESSION['id'])) || (empty($_SESSION['id']))){
 
 	<div class="container">
 	  <div class="row ">
-
-			<nav class="col-md-2 sidebar-offcanvas " > <!--nav vertical début -->
-
-		      <ul class="nav nav-pills-changer nav-stacked "  data-spy="affix">
-		        <li class="active"><a  href="accueil_connecte.php">Accueil</a></li>
-		        <li><a href="profil.php">Profil</a></li>
-		        <li><a href="parametre.php" >Paramètre</a></li>
-		        <li><a href="htmlgroupe.php">Groupe</a></li>
-		        <li><a href="abonne.php">Mes abonnés</a></li>
-
-		      </ul>
-		    </nav> <!--nav vertical fin -->
-
-
 			<div class="col-md-10 col-md-offset-2" > <!--colonne 10 debut -->
-
 		      <div class="tab-content"> <!--tab content début -->
-
 		      	<div id="accueil" class="tab-pane fade in active"> <!--Accueil début -->
 					<div class="container" style="width:100%;"> <!--container de publication début -->
 					    <div class="panel panel-default"> <!--Publier début -->
@@ -42,7 +26,7 @@ if ((!isset($_SESSION['id'])) || (empty($_SESSION['id']))){
 					      	<h3>Publier</h3>
 					      	<form action="accueil_connecte.php" method="POST">
 							    <div class="form-group ">
-							      <label for="comment">Comment :</label>
+							      <label for="comment">Message :</label>
 							      <textarea class="form-control taille-textarea" rows="5" id="comment" type="text" name="textpublie" placeholder="Entrer votre texte"></textarea><br/>
 							      <div class='btn-toolbar pull-right '>
 							    	<input type="submit" class="btn btn-default btn-xs button-bas-droite" name="click" value="publier">
@@ -101,23 +85,5 @@ if ((!isset($_SESSION['id'])) || (empty($_SESSION['id']))){
 	</div><!--container fin -->
 
 
-
-<!--
-	<div>
-		<br/>Mes messages : <?php include("include/mes_messages.php");?><br/>
-	</div>
-
-
-
-	<div>
-		mes groupes: <?php include("include/mes_groupes.php");?>
-	</div>
-
-
-
-	<div>
-		<a href="deconnexion.php">Deconnexion</a>
-	</div>
--->
 </body>
 </html>

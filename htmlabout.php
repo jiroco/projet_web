@@ -3,7 +3,7 @@ session_start();
 if ((!isset($_SESSION['id'])) || (empty($_SESSION['id']))){
 ?>
     <!DOCTYPE html>
-    <html lang="en">
+    <html lang="fr">
       <head>
         <title>About INSA'Twitter</title>
       </head>
@@ -15,7 +15,7 @@ if ((!isset($_SESSION['id'])) || (empty($_SESSION['id']))){
           <div class="row">
                   <div class="col-lg-12">
                       <h1 class="page-header">About Us
-                          <small>It's Nice to Meet You!</small>
+                          <small>Rencontrons nous!</small>
                       </h1>
                       <p>Description INSA'Twitter </p>
                   </div>
@@ -24,14 +24,14 @@ if ((!isset($_SESSION['id'])) || (empty($_SESSION['id']))){
               <!-- Team Members Row -->
               <div class="row">
                   <div class="col-lg-12">
-                      <h2 class="page-header">Our Team</h2>
+                      <h2 class="page-header">Notre équipe</h2>
                   </div>
                   <div class="col-lg-6 col-sm-6 text-center">
                       <img class="img-circle img-responsive img-center" src="image/jean.png" alt="">
                       <h3>Jean Savoldeli
                           <small>Backend</small>
                       </h3>
-                      <p>What does this team member to? Keep it short! This is also a great spot for social links!</p><br/><br/>
+                      <p>Le fait que, grâce au web, toute la connaissance soit accessible en un clic, ça me semble être une bonne chose.</p><br/><br/>
                   </div>
                   <div class="col-lg-6 col-sm-6 text-center">
                       <img class="img-circle img-responsive img-center" src="http://placehold.it/200x200" alt="">
@@ -79,7 +79,7 @@ if ((!isset($_SESSION['id'])) || (empty($_SESSION['id']))){
 }
 else{
   ?>
- <html lang="en">
+ <html lang="fr">
   <head>
     <title>About INSA'Twitter</title>
   </head>
@@ -91,7 +91,7 @@ else{
       <div class="row">
               <div class="col-lg-12">
                   <h1 class="page-header">About Us
-                      <small>It's Nice to Meet You!</small>
+                      <small>Rencontrons nous!</small>
                   </h1>
                   <p>Description INSA'Twitter </p>
               </div>
@@ -107,7 +107,7 @@ else{
                   <h3>Jean Savoldeli
                       <small>Backend</small>
                   </h3>
-                  <p>What does this team member to? Keep it short! This is also a great spot for social links!</p><br/><br/>
+                  <p>Le fait que, grâce au web, toute la connaissance soit accessible en un clic, ça me semble être une bonne chose.</p><br/><br/>
               </div>
               <div class="col-lg-6 col-sm-6 text-center">
                   <img class="img-circle img-responsive img-center" src="http://placehold.it/200x200" alt="">
