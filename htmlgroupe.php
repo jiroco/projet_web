@@ -30,7 +30,7 @@
 
 
 					<div class="panel-body" align="center">
-						<a href='recherche_groupe.php'><button type="submit" class="btn btn-primary btn-sm"><span class="glyphicon glyphicon-search"></span> Recherche de groupe</button></a>
+						<a href='recherche_groupe.php'><button type="submit" class="btn btn-primary btn-sm"><span class="glyphicon glyphicon-search"></span> Rechercher un groupe</button></a>
 						<a href='creer_groupe.php'><button type="submit" class="btn btn-primary btn-sm"><span class="glyphicon glyphicon-search"></span> Créer un groupe</button></a>
 					</div>
 
