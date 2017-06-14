@@ -25,9 +25,9 @@
             <li><a href="htmlgroupe.php">Mes groupes</a></li>
             <li><a href="abonne.php">Mes abonnements</a></li>
             <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Menu <span class="caret"></span></a>
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Plus <span class="caret"></span></a>
               <ul class="dropdown-menu">
-                <li><a href="htmlabout.php">About</a></li>
+                <li><a href="htmlabout.php">A propos</a></li>
                 <li><a href="htmlcontact.php">Contacts</a></li>
                 <li role="separator" class="divider"></li>
                 <li><a href="parametre.php"><span class="glyphicon glyphicon-cog"></span> Paramètres</a></li>

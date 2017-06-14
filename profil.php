@@ -36,7 +36,7 @@ if ((!isset($_SESSION['id'])) || (empty($_SESSION['id']))){
 						                  <table class="table table-user-information">
 						                    <tbody>
 						                      <tr>
-						                        <td>Department:</td>
+						                        <td>Departement:</td>
 						                        <td><?php print_r($_SESSION['departement']) ?></td>
 						                      </tr>
 						                      <tr>
@@ -56,7 +56,7 @@ if ((!isset($_SESSION['id'])) || (empty($_SESSION['id']))){
 						                </div>
 						                <div class="col-md-5 col-lg-5" align="center">
                 						<form method="post" enctype="multipart/form-data" action="upload.php">
-                							<label>Your Picture(PNG | max. 1 Mo):</label>
+                							<label>Votre image de profil(PNG | max. 1 Mo):</label>
                 							<input type="hidden" name="MAX_FILE_SIZE" value="1048576" />
                 							<input type="file" id="pictureprofil" name="pictureprofil">
                 							<input type="submit" name="submit" value="Envoyer">

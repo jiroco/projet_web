@@ -20,13 +20,13 @@ if ((!isset($_SESSION['id'])) || (empty($_SESSION['id']))){
                 <div class="well well-sm">
                   <form class="form-horizontal" action="" method="post">
                   <fieldset>
-                    <legend class="text-center">Nous Contactez<br/></legend>
+                    <legend class="text-center">Nous Contacter<br/></legend>
             
                     <!-- Name input-->
                     <div class="form-group">
                       <label class="col-md-3 control-label" for="name">Nom</label>
                       <div class="col-md-9">
-                        <input id="name" name="name" type="text" placeholder="Your name" class="form-control ">
+                        <input id="name" name="name" type="text" placeholder="Votre nom" class="form-control ">
                       </div>
                     </div>
             
@@ -34,7 +34,7 @@ if ((!isset($_SESSION['id'])) || (empty($_SESSION['id']))){
                     <div class="form-group">
                       <label class="col-md-3 control-label" for="email">E-mail</label>
                       <div class="col-md-9">
-                        <input id="email" name="email" type="text" placeholder="Your email" class="form-control">
+                        <input id="email" name="email" type="text" placeholder="Votre email" class="form-control">
                       </div>
                     </div>
             
@@ -42,14 +42,14 @@ if ((!isset($_SESSION['id'])) || (empty($_SESSION['id']))){
                     <div class="form-group">
                       <label class="col-md-3 control-label" for="message">Message</label>
                       <div class="col-md-9">
-                        <textarea class="form-control taille-textarea" type="text" id="message" name="message" placeholder="Please enter your message here..." rows="5"></textarea>
+                        <textarea class="form-control taille-textarea" type="text" id="message" name="message" placeholder="Votre message..." rows="5"></textarea>
                       </div>
                     </div>
             
                     <!-- Form actions -->
                     <div class="form-group">
                       <div class="col-md-12 text-right">
-                        <button type="submit" class="btn btn-default btn-xs">Submit</button>
+                        <button type="submit" class="btn btn-default btn-xs">Envoyer</button>
                       </div>
                     </div>
                   </fieldset>
@@ -95,13 +95,13 @@ else{
                 <div class="well well-sm">
                   <form class="form-horizontal" action="" method="post">
                   <fieldset>
-                    <legend class="text-center">Nous Contactez<br/></legend>
+                    <legend class="text-center">Nous Contacter<br/></legend>
             
                     <!-- Name input-->
                     <div class="form-group">
                       <label class="col-md-3 control-label" for="name">Nom</label>
                       <div class="col-md-9">
-                        <input id="name" name="name" type="text" placeholder="Your name" class="form-control ">
+                        <input id="name" name="name" type="text" placeholder="Votre nom" class="form-control ">
                       </div>
                     </div>
             
@@ -109,7 +109,7 @@ else{
                     <div class="form-group">
                       <label class="col-md-3 control-label" for="email">E-mail</label>
                       <div class="col-md-9">
-                        <input id="email" name="email" type="text" placeholder="Your email" class="form-control">
+                        <input id="email" name="email" type="text" placeholder="Votre email" class="form-control">
                       </div>
                     </div>
             
@@ -117,7 +117,7 @@ else{
                     <div class="form-group">
                       <label class="col-md-3 control-label" for="message">Message</label>
                       <div class="col-md-9">
-                        <textarea class="form-control taille-textarea" type="text" id="message" name="message" placeholder="Please enter your message here..." rows="5"></textarea>
+                        <textarea class="form-control taille-textarea" type="text" id="message" name="message" placeholder="Votre message..." rows="5"></textarea>
                       </div>
                     </div>
             
