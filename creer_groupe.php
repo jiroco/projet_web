@@ -27,7 +27,7 @@ if ((!isset($_SESSION['id'])) || (empty($_SESSION['id']))){
 							</div>
 					    	<div class="panel-body">
 								<form action="creer_groupe.php" method="POST">
-									<input type="text" name="nomgroupe" placeholder="Nom de groupe"/><br>
+									<input type="text" name="nomgroupe" placeholder="Nom de groupe"/>
 									<button type="submit" class="btn btn-primary btn-sm"><span class="glyphicon glyphicon-search"></span> Créer</button>
 								</form>
 
