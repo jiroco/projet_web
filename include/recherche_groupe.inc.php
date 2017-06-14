@@ -61,5 +61,3 @@ if(isset($_POST['rechercheag']) && !empty($_POST['rechercheag'])){
 
 	}
 }
-
-include("abonnement_groupe.php");
