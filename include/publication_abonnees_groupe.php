@@ -2,9 +2,25 @@
 
 include("connexiondb.php");
 
+$check = $DBcon->prepare('SELECT IDGROUPE from atog WHERE IDUSER=?');
+$check->bindValue(1,$_SESSION['id'],PDO::PARAM_INT);
+$check->execute();
+$autorisation=0;
+while($autor=$check->fetch()) {
+	print_r($autor["IDGROUPE"]);
+	if ($_GET["Idgroupe"] = $autor["IDGROUPE"]) {
+		$autorisation=1;
+	}
+}
+
+if ($autorisation == 0) {
+	die();
+}
+
 $req = $DBcon->prepare('SELECT ID, THUMBSUP, MESSAGE, NOM, PRENOM, IMAGE from messagetog WHERE IDGROUPE = ? GROUP BY ID DESC');
 $req->bindValue(1,$_SESSION['IDGROUPE'],PDO::PARAM_INT);
 $check=$req->execute();
+echo $autorisation;
 if($check){
 	while ($resultat=$req->fetch()){
 		?>
