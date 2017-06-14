@@ -27,7 +27,7 @@ if ((!isset($_SESSION['id'])) || (empty($_SESSION['id']))){
 					      	<form action="accueil_connecte.php" method="POST">
 							    <div class="form-group ">
 							      <label for="comment">Message :</label>
-							      <textarea class="form-control taille-textarea" rows="5" id="comment" type="text" name="textpublie" placeholder="Entrer votre texte"></textarea><br/>
+							      <textarea class="form-control taille-textarea" rows="3" id="comment" type="text" name="textpublie" placeholder="Entrer votre texte"></textarea><br/>
 							      <div class='btn-toolbar pull-right '>
 							    	<input type="submit" class="btn btn-default btn-xs button-bas-droite" name="click" value="publier">
 							      </div><br/>
@@ -63,7 +63,7 @@ if ((!isset($_SESSION['id'])) || (empty($_SESSION['id']))){
                           type: 'POST',
                           data: dataObject,
                         	success: function(data) {
-                            $("#" + -id_message).html(" J'aime : " + data);
+                            $("#" + -id_message).html(data);
                         	},
                         	error: function() {
                         		$("#" + -id_message).html(0);

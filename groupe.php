@@ -61,7 +61,7 @@ $_SESSION["IDGROUPE"]=$_GET["Idgroupe"];
                         type: 'POST',
                         data: dataObject,
                         success: function(data) {
-                          $("#" + -id_message).html(" J'aime : " + data);
+                          $("#" + -id_message).html(data);
                         },
                         error: function() {
                           $("#" + -id_message).html(0);
