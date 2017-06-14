@@ -17,7 +17,7 @@ if ((!isset($_SESSION['id'])) || (empty($_SESSION['id']))){
 
 	<div class="container">
 	  <div class="row ">
-			<div class="col-md-10 col-md-offset-2" > <!--colonne 10 debut -->
+			<div class="container col-md-10 col-md-offset-1" > <!--colonne 10 debut -->
 		      <div class="tab-content"> <!--tab content début -->
 		      	<div id="accueil" class="tab-pane fade in active"> <!--Accueil début -->
 					<div class="container" style="width:100%;"> <!--container de publication début -->

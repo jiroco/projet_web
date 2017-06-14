@@ -20,7 +20,6 @@
 			  	<div class="panel panel-default">
 			    	<div class="panel-heading">
 			    		<h3>Mes groupes</h3>
-			    		<span class="glyphicon icon-group"></span>
 			    	</div>
 
 			    	<div class="panel-body">
