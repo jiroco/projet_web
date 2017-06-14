@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Client :  127.0.0.1
--- Généré le :  Mer 07 Juin 2017 à 09:49
+-- Généré le :  Mar 13 Juin 2017 à 08:56
 -- Version du serveur :  5.7.14
 -- Version de PHP :  5.6.25
 
@@ -43,6 +43,48 @@ INSERT INTO `abonnee` (`IDUSER`, `IDUSERABONNE`) VALUES
 (3, 1),
 (2, 3),
 (10, 1),
+(2, 10);
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `aime`
+--
+
+CREATE TABLE `aime` (
+  `ID_USER` int(11) NOT NULL,
+  `ID_MESSAGE` int(11) NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+--
+-- Contenu de la table `aime`
+--
+
+INSERT INTO `aime` (`ID_USER`, `ID_MESSAGE`) VALUES
+(2, 13),
+(2, 12),
+(2, 20),
+(1, 20);
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `aimeg`
+--
+
+CREATE TABLE `aimeg` (
+  `ID_USER` int(11) NOT NULL,
+  `ID_MESSAGE` int(11) NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+--
+-- Contenu de la table `aimeg`
+--
+
+INSERT INTO `aimeg` (`ID_USER`, `ID_MESSAGE`) VALUES
+(2, 6),
+(2, 4),
+(1, 10),
 (2, 10);
 
 -- --------------------------------------------------------
@@ -96,25 +138,26 @@ CREATE TABLE `messages` (
   `CONTENU` varchar(256) NOT NULL,
   `NOM` varchar(256) NOT NULL,
   `PRENOM` varchar(256) NOT NULL,
-  `IMAGE` varchar(256) NOT NULL
+  `IMAGE` varchar(256) NOT NULL,
+  `THUMBSUP` int(11) DEFAULT '0'
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
 -- Contenu de la table `messages`
 --
 
-INSERT INTO `messages` (`ID`, `IDUSER`, `CONTENU`, `NOM`, `PRENOM`, `IMAGE`) VALUES
-(1, 1, 'Salut ceci est un test pour la base de donnée', 'Savoldelli', 'Jean', 'jiroco'),
-(2, 2, 'Ceci est un test de message pour david neyron', 'Neyron', 'David', 'dneyron'),
-(3, 2, 'Ceci est le deuxieme message pour un test de bdd', 'Neyron', 'David', 'dneyron'),
-(4, 1, 'TEST d\'abonnée', 'Savoldelli', 'Jean', 'jiroco'),
-(5, 1, 'Bonjour à tous j\'espere que tout le monde va bien!!! ceci est un test de publication', 'Savoldelli', 'Jean', 'jiroco'),
-(6, 2, 'Ceci est un message test que l\'on fait avec david neyron', 'Neyron', 'David', 'dneyron'),
-(7, 9, 'Vous etes tous moche !', 'abdallah', 'yanis', 'sansuser'),
-(12, 2, 'bonjour c\'est moi david', 'Neyron', 'David', 'dneyron'),
-(13, 10, 'coucou c\'est mon premier jour dessus :)', 'Aublet', 'Marine', 'sansuser'),
-(19, 2, 'essaie pour yanis', 'Neyron', 'David', 'dneyron'),
-(20, 2, 'coucou', 'Neyron', 'David', 'dneyron');
+INSERT INTO `messages` (`ID`, `IDUSER`, `CONTENU`, `NOM`, `PRENOM`, `IMAGE`, `THUMBSUP`) VALUES
+(1, 1, 'Salut ceci est un test pour la base de donnée', 'Savoldelli', 'Jean', 'jiroco', 0),
+(2, 2, 'Ceci est un test de message pour david neyron', 'Neyron', 'David', 'dneyron', 0),
+(3, 2, 'Ceci est le deuxieme message pour un test de bdd', 'Neyron', 'David', 'dneyron', 0),
+(4, 1, 'TEST d\'abonnée', 'Savoldelli', 'Jean', 'jiroco', 0),
+(5, 1, 'Bonjour à tous j\'espere que tout le monde va bien!!! ceci est un test de publication', 'Savoldelli', 'Jean', 'jiroco', 0),
+(6, 2, 'Ceci est un message test que l\'on fait avec david neyron', 'Neyron', 'David', 'dneyron', 0),
+(7, 9, 'Vous etes tous moche !', 'abdallah', 'yanis', 'sansuser', 0),
+(12, 2, 'bonjour c\'est moi david', 'Neyron', 'David', 'dneyron', 1),
+(13, 10, 'coucou c\'est mon premier jour dessus :)', 'Aublet', 'Marine', 'sansuser', 1),
+(19, 2, 'essaie pour yanis', 'Neyron', 'David', 'dneyron', 0),
+(20, 2, 'coucou', 'Neyron', 'David', 'dneyron', 2);
 
 -- --------------------------------------------------------
 
@@ -128,18 +171,19 @@ CREATE TABLE `messagetog` (
   `MESSAGE` varchar(256) NOT NULL,
   `NOM` varchar(256) NOT NULL,
   `PRENOM` varchar(256) NOT NULL,
-  `IMAGE` varchar(256) NOT NULL
+  `IMAGE` varchar(256) NOT NULL,
+  `THUMBSUP` int(11) NOT NULL DEFAULT '0'
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
 -- Contenu de la table `messagetog`
 --
 
-INSERT INTO `messagetog` (`ID`, `IDGROUPE`, `MESSAGE`, `NOM`, `PRENOM`, `IMAGE`) VALUES
-(3, 2, 'test Message 3A', '', '', ''),
-(4, 2, 'test2', '', '', ''),
-(6, 2, 'ceci est un test de message pour les 3A', '', '', ''),
-(10, 1, 'test de message de groupe', 'Neyron', 'David', 'dneyron');
+INSERT INTO `messagetog` (`ID`, `IDGROUPE`, `MESSAGE`, `NOM`, `PRENOM`, `IMAGE`, `THUMBSUP`) VALUES
+(3, 2, 'test Message 3A', '', '', '', 0),
+(4, 2, 'test2', '', '', '', 1),
+(6, 2, 'ceci est un test de message pour les 3A', '', '', '', 1),
+(10, 1, 'test de message de groupe', 'Neyron', 'David', 'dneyron', 2);
 
 -- --------------------------------------------------------
 
@@ -229,7 +273,7 @@ ALTER TABLE `groupe`
 -- AUTO_INCREMENT pour la table `messages`
 --
 ALTER TABLE `messages`
-  MODIFY `ID` int(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
+  MODIFY `ID` int(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 --
 -- AUTO_INCREMENT pour la table `messagetog`
 --

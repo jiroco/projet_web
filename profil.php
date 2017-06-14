@@ -1,11 +1,18 @@
+<?php
+session_start();
+if ((!isset($_SESSION['id'])) || (empty($_SESSION['id']))){
+    echo "<meta http-equiv='refresh' content='0; URL=index.php'>";
+}
+?>
+
+
 <html>
 <head>
-	<title>Test</title>
+	<title>Profil</title>
 
 </head>
 <body>
 	<?php include 'htmlnavBar.php'; ?>
-	<?php session_start();?>
 	<div class="container col-md-10 col-md-offset-1">
 	  <div class="row ">
 		      
@@ -43,11 +50,7 @@
 							                  <tr>
 							                    <td>Email</td>
 							                    <td><a href="mailto:"><?php print_r($_SESSION['mail']) ?></a></td>
-							                  </tr>
-							                    <td>Phone Number</td>
-							                    <td>123-4567-890(Landline)<br><br>555-4567-890(Mobile)</td>						                           
-						                      </tr>
-						                     
+						                     </tr>
 						                    </tbody>
 						                  </table>
 						                </div>

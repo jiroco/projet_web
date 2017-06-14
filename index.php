@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
   <head>
     <?php include 'include_html.php';?>
     
-    <title>Accueil</title>
+    <title>INSA'Twitter</title>
 
   </head>
 
@@ -17,11 +17,11 @@
 
       <div class="bouton">
       <form methode="POST" action="login.php">
-        <button type="submit" class="btn btn-XL btn-default">Login</button>
+        <button type="submit" class="btn btn-XL btn-default">Connexion</button>
         </form>
         <br><br>
         <form methode="POST" action="register.php">
-        <button type="submit" class="btn btn-XL btn-default">Register</button>
+        <button type="submit" class="btn btn-XL btn-default">Inscription</button>
         </form>
 
       </div>
