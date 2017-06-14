@@ -53,7 +53,7 @@
                             </tr>
                             <tr>
                               <td>Changer votre mot de Passe</td>
-                              <td><input type="text" class="form-control" placeholder="Changez votre mot de passe..." name="username" value=""></td>
+                              <td><input type="text" class="form-control" placeholder="Changez votre mot de passe..." name="password" value=""></td>
                               <td><input type="submit" value="Changer" class="btn btn-default"></td>
                             </tr>
 
