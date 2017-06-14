@@ -63,7 +63,7 @@ if ((!isset($_SESSION['id'])) || (empty($_SESSION['id']))){
                           type: 'POST',
                           data: dataObject,
                         	success: function(data) {
-                            $("#" + -id_message).html(" J'aime : " + data);
+                            $("#" + -id_message).html(data);
                         	},
                         	error: function() {
                         		$("#" + -id_message).html(0);
