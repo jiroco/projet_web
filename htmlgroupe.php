@@ -1,11 +1,14 @@
+<?php session_start(); ?>
 <html>
 <head>
 	<title>Mes groupes</title>
 
 </head>
 <body style="height:100%">
-	<?php include 'htmlnavBar.php'; ?>
-	<?php session_start();?>
+	<?php
+	include 'htmlnavBar.php';
+	include('include/connexiondb.php');
+	?>
 
 
 
@@ -21,7 +24,7 @@
 			    	</div>
 
 			    	<div class="panel-body">
-						<div>	
+						<div>
 							<?php include("include/mes_groupes.php");?>
 						</div>
 			    	</div>
@@ -37,8 +40,8 @@
 
 				</div>
 			</diov>
-		</div> <!-- Groupe fin -->		      
-	  </div><!--row fin -->	   
+		</div> <!-- Groupe fin -->
+	  </div><!--row fin -->
 	</div><!--container fin -->
 
 <footer>
@@ -47,18 +50,3 @@
 
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
