@@ -7,11 +7,14 @@ $uploadOk = 1;
 $imageFileType = pathinfo($target_file,PATHINFO_EXTENSION);
 // Check if image file is a actual image or fake image
 if(isset($_POST["submit"])) {
+    echo("1");
     $check = getimagesize($_FILES["pictureprofil"]["tmp_name"]);
     if($check !== false) {
-        echo "File is an image - " . $check["mime"] . ".";
+        echo("2 if");
+        echo "File is an image - ".$check["mime"].".";
         $uploadOk = 1;
     } else {
+        echo("2 else");
         echo "File is not an image or too large"; 
         $uploadOk = 0;
     }
@@ -19,20 +22,24 @@ if(isset($_POST["submit"])) {
 
 // Check file size
 if ($_FILES["pictureprofil"]["size"] > 500000) {
+    echo("3");
     echo "Sorry, your file is too large.";
     $uploadOk = 0;
 }
 // Allow certain file formats
 if($imageFileType != "png") {
+    echo("4");
     echo "Sorry, only PNG files are allowed.";
     $uploadOk = 0;
 }
 // Check if $uploadOk is set to 0 by an error
 if ($uploadOk == 0) {
+    echo("5");
     echo "Sorry, your file was not uploaded.";
     header("Refresh: 3; URL=profil.php");
 // if everything is ok, try to upload file
 } else {
+    echo("6");
     if (move_uploaded_file($_FILES["pictureprofil"]["tmp_name"], $target_file)) { 
    
         echo "<meta http-equiv='refresh' content='0; URL=profil.php'>";

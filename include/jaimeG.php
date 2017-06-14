@@ -1,6 +1,6 @@
 <?php
 
-$DBcon = new PDO('mysql:host=localhost;dbname=insatwitter;charset=utf8','root','');
+$DBcon = new PDO('mysql:host=localhost;dbname=insatwitter;charset=utf8','root','root');
 
 $id_message = $_POST["id_message"];
 $id_user = $_POST["id_user"];
