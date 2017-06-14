@@ -54,7 +54,7 @@ if ((!isset($_SESSION['id'])) || (empty($_SESSION['id']))){
 						                    </tbody>
 						                  </table>
 						                </div>
-						                <div class="col-md-5 col-lg-5" align="center">
+						                <div class="col-md-9 col-lg-9" align="center">
                 						<form method="post" enctype="multipart/form-data" action="upload.php">
                 							<label>Votre image de profil(PNG | max. 1 Mo):</label>
                 							<input type="hidden" name="MAX_FILE_SIZE" value="1048576" />
