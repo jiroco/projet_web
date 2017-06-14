@@ -1,6 +1,6 @@
 <?php
 
-include("connexiondb.php")
+include("connexiondb.php");
 $id_message = $_POST["id_message"];
 $id_user = $_POST["id_user"];
 
