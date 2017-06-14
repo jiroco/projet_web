@@ -22,16 +22,16 @@
         <label for="inputdepartement" class="sr-only">Departement</label>
         <input id="inputdepartement" class="form-control" placeholder="Departement" name="departement" type="text">
 
-        <label for="inputEmail" class="sr-only">Email address</label>
+        <label for="inputEmail" class="sr-only">Email</label>
         <input id="email" class="form-control" type="email" name="email" placeholder="Entrer votre adresse mail"/>
 
         <label for="inputUsername" class="sr-only">Username</label>
         <input id="inputUsername" class="form-control" placeholder="Username" name="username" type="text">
 
-        <label for="inputPassword" class="sr-only">Password</label>
+        <label for="inputPassword" class="sr-only">Mot de passe</label>
         <input id="inputPassword" class="form-control" placeholder="Password" name="passwd" type="password">
 
-        <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+        <button class="btn btn-lg btn-primary btn-block" type="submit">S'inscrire</button>
       </form>
 
     </div>
