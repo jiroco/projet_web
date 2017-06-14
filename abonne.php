@@ -21,7 +21,7 @@
 							</div>
 					    	<div class="panel-body">
 								<form action="abonne.php" method="POST">
-									<input type="text" name="recherchea" placeholder="Pseudo de l'abonne"/>
+									<input type="text" name="recherchea" placeholder="Pseudo de l'abonné"/>
 									<button type="submit" class="btn btn-primary btn-sm"><span class="glyphicon glyphicon-search"></span> Rechercher</button>
 								</form>
 

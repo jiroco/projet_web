@@ -15,7 +15,7 @@ if(isset($_POST['rechercheag']) && !empty($_POST['rechercheag'])){
 			?>
 			<div>
 				<form method="POST">
-					<input type="submit" name="groupe" value="S'abonner">
+					<button type="submit" class="btn btn-primary btn-sm"><span class="glyphicon glyphicon-search"></span>S'abonner</button>
 				</form>
 			</div>
 
@@ -34,12 +34,9 @@ if(isset($_POST['rechercheag']) && !empty($_POST['rechercheag'])){
 			while ($resultat=$req->fetch()){
 				
 			?>
-								<div class="col-md-5 col-lg-5" align="left">
-        						   	</div>
-                					
-	                				<div class=" col-md-7 col-lg-7 ">
-						            Nom :
-						            <?php print_r($resultat["NOM"])?>
+				<div align="center">
+						            Nom : <?php print_r($resultat["NOM"])?>
+						            <br>
 						            </div>
 						            <!--</tbody>
 						            </table>
@@ -52,7 +49,7 @@ if(isset($_POST['rechercheag']) && !empty($_POST['rechercheag'])){
 	        </div>
 
 	  </div>-->
-	</div><?php
+	<?php
 			}
 		}
 		else
