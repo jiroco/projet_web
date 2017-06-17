@@ -12,12 +12,12 @@ if(isset($_POST['recherchea']) && !empty($_POST['recherchea'])){
 		if($resultat=$req->fetch()){
 			print_r("Nom : ".$resultat["NOM"]." ");
 			print_r("Prenom : ".$resultat["PRENOM"]." ");
-			print_r("Username : ".$resultat["USERNAME"]." ");
+			print_r("Surnom : ".$resultat["USERNAME"]." ");
 			$_SESSION["rechabonne"]=$resultat["ID"];
 			?>
 			<div>
 				<form method="POST">
-					<input type="submit" name="abonne" value="S'abonner">
+					<button type="submit" class="btn btn-primary btn-sm"><span class="glyphicon glyphicon-search"></span>S'abonner</button>
 				</form>
 			</div>
 			<?php

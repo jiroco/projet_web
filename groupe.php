@@ -1,5 +1,6 @@
 <?php
 session_start();
+include('include/connexiondb.php');
 if ((!isset($_SESSION['id'])) || (empty($_SESSION['id']))){
     echo "<meta http-equiv='refresh' content='0; URL=index.php'>";
 }
