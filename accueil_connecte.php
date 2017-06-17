@@ -28,9 +28,11 @@ if ((!isset($_SESSION['id'])) || (empty($_SESSION['id']))){
 							    <div class="form-group ">
 							      <label for="comment">Message :</label>
 							      <textarea class="form-control taille-textarea" rows="3" id="comment" type="text" name="textpublie" placeholder="Entrer votre texte"></textarea><br/>
-							      <div class='btn-toolbar pull-right '>
-							    	<input type="submit" class="btn btn-default btn-xs button-bas-droite" name="click" value="publier">
-							      </div><br/>
+									<button class="btn-toolbar pull-right btn btn-danger btn-sm button-bas-droite" type="submit" name="click" value="publier">
+									    <span class="glyphicon glyphicon-send"></span> Publier
+									</button>
+								  <br/>
+
 							    </div>
 							 </form>
 					  	  </div>
@@ -46,32 +48,32 @@ if ((!isset($_SESSION['id'])) || (empty($_SESSION['id']))){
 									include("include/publication_abonnees.php");
 									include("include/publication_message.php");
 									?>
-                  <script
-                  		src="https://code.jquery.com/jquery-3.2.1.js"
-                  		integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
-                  		crossorigin="anonymous"></script>
-                  <script type="text/javascript">
-                    $(document).ready(function () {
-                      $('.jaimeb').click(function () {
-                        var id_message = $(this).attr('id')
-                        var dataObject = {};
-                        dataObject["id_message"] = id_message;
-                        dataObject["id_user"] = <?php echo $_SESSION["id"] ?>;
-                        $.ajax({
-                        	url:  'include/jaime.php',
-                        	timeout: 30000,
-                          type: 'POST',
-                          data: dataObject,
-                        	success: function(data) {
-                            $("#" + -id_message).html(data);
-                        	},
-                        	error: function() {
-                        		$("#" + -id_message).html(0);
-                        	},
-                        });
-                      });
-                    });
-                  </script>
+					                <script
+				                  		src="https://code.jquery.com/jquery-3.2.1.js"
+				                  		integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+				                  		crossorigin="anonymous"></script>
+					                <script type="text/javascript">
+					                    $(document).ready(function () {
+					                      $('.jaimeb').click(function () {
+					                        var id_message = $(this).attr('id')
+					                        var dataObject = {};
+					                        dataObject["id_message"] = id_message;
+					                        dataObject["id_user"] = <?php echo $_SESSION["id"] ?>;
+					                        $.ajax({
+					                        	url:  'include/jaime.php',
+					                        	timeout: 30000,
+					                          type: 'POST',
+					                          data: dataObject,
+					                        	success: function(data) {
+					                            $("#" + -id_message).html(data);
+					                        	},
+					                        	error: function() {
+					                        		$("#" + -id_message).html(0);
+					                        	},
+					                        });
+					                      });
+					                    });
+					                </script>
 								</div> <!--panel group fin -->
 							</div><!--panel heading pour toutes les publications fin -->
 					    </div><!--Twitt fin -->

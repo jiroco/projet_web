@@ -31,7 +31,7 @@
         <label for="inputPassword" class="sr-only">Mot de passe</label>
         <input id="inputPassword" class="form-control" placeholder="Password" name="passwd" type="password">
 
-        <button class="btn btn-lg btn-primary btn-block" type="submit">S'inscrire</button>
+        <button class="btn btn-lg btn-primary btn-block btn-danger active" type="submit">S'inscrire</button>
       </form>
 
     </div>

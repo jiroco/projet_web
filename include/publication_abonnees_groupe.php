@@ -21,7 +21,7 @@ if($check){
 						<button id="<?php echo $resultat["ID"]; ?>" class="jaimeb btn btn-default btn-xs" type="button" value="J'aime">
 						    <span class="glyphicon glyphicon-thumbs-up"></span> J'aime
 						</button> <!-- fin button j'aime avec le pouce !!!-->
-						<span class="label label-info" id="<?php echo -$resultat["ID"]; ?>"><?php echo $resultat["THUMBSUP"]; ?></span>
+						<span class="label label-success" id="<?php echo -$resultat["ID"]; ?>"><?php echo $resultat["THUMBSUP"]; ?></span>
 					<br/>
 				</div>
 			</div>

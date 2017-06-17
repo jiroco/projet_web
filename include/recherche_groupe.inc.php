@@ -27,32 +27,24 @@ if(isset($_POST['rechercheag']) && !empty($_POST['rechercheag'])){
 		$req->bindValue(1,"%".$grouperecherche."%",PDO::PARAM_INT);
 		$check=$req->execute();
 		?>
-		<br><div class="container col-md-10">
+		<br>
+		<div class="container col-md-10">
 		<?php
 
 		if($check){
 			while ($resultat=$req->fetch()){
 				
 			?>
-								<div class="col-md-5 col-lg-5" align="left">
-        						   	</div>
-                					
-	                				<div class=" col-md-7 col-lg-7 ">
-						            Nom :
-						            <?php print_r($resultat["NOM"])?>
-						            </div>
-						            <!--</tbody>
-						            </table>
-						            
-					            </div>
-						    </div>
-					    </div>
-					    </div>
-		        </div>
-	        </div>
+			<div class="col-md-5 col-lg-5" align="right">
+			   	<div class=" col-md-7 col-lg-7 ">
+	           		Nom :
+	            	<?php print_r($resultat["NOM"])?>
+	            </div>
 
-	  </div>-->
-	</div><?php
+			</div>
+                					
+		</div>
+	<?php
 			}
 		}
 		else
