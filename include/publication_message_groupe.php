@@ -1,6 +1,8 @@
 <?php
 include("connexiondb.php");
+
 session_start();
+
 if(isset($_POST['textpubliegroupe']) && !empty($_POST['textpubliegroupe']) && isset($_POST['clickgroupe']) ){
 
     $text=htmlspecialchars($_POST['textpubliegroupe']);

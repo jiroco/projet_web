@@ -2,6 +2,20 @@
 
 include("connexiondb.php");
 
+$check = $DBcon->prepare('SELECT IDGROUPE from atog WHERE IDUSER=?');
+$check->bindValue(1,$_SESSION['id'],PDO::PARAM_INT);
+$check->execute();
+$autorisation=False;
+while($autor=$check->fetch()) {
+	if ($_GET["Idgroupe"] == $autor["IDGROUPE"]) {
+		$autorisation=True;
+	}
+}
+
+if ($autorisation == False) {
+	exit();
+}
+
 $req = $DBcon->prepare('SELECT ID, THUMBSUP, MESSAGE, NOM, PRENOM, IMAGE from messagetog WHERE IDGROUPE = ? GROUP BY ID DESC');
 $req->bindValue(1,$_SESSION['IDGROUPE'],PDO::PARAM_INT);
 $check=$req->execute();
@@ -21,7 +35,7 @@ if($check){
 						<button id="<?php echo $resultat["ID"]; ?>" class="jaimeb btn btn-default btn-xs" type="button" value="J'aime">
 						    <span class="glyphicon glyphicon-thumbs-up"></span> J'aime
 						</button> <!-- fin button j'aime avec le pouce !!!-->
-						<span class="label label-info" id="<?php echo -$resultat["ID"]; ?>"><?php echo $resultat["THUMBSUP"]; ?></span>
+						<span class="label label-success" id="<?php echo -$resultat["ID"]; ?>"><?php echo $resultat["THUMBSUP"]; ?></span>
 					<br/>
 				</div>
 			</div>

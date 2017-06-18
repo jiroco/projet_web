@@ -21,13 +21,13 @@ if (isset($_POST['username']) && !empty($_POST['username']) && isset($_POST['pas
                     echo "<meta http-equiv='refresh' content='0; URL=accueil_connecte.php'>";    
                 }
                 else
-                    echo "Mauvais identifiants.<br>";
+                    echo "</br><div class='container col-md-4 col-md-offset-4'><div class='alert alert-danger' style='text-align: center;'> <strong>Attention !</strong> Identifiants incorrects. </div></div>";
             }
-            else
-                echo "Mauvais identifiants.<br>";               
+            else                
+                echo "</br><div class='container col-md-4 col-md-offset-4'><div class='alert alert-danger' style='text-align: center;'> <strong>Attention !</strong> Identifiants incorrects. </div></div>";        
         }
         else
-            echo "Erreur de requete.<br>";
+            echo "</br><div class='container col-md-4 col-md-offset-4'><div class='alert alert-danger' style='text-align: center;'> <strong>Attention !</strong> Erreur de requete.</div></div>";        
         
         $req->closeCursor();
     }

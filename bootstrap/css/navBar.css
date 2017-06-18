@@ -5,7 +5,8 @@ body {
 
   color:black;
   background-color:white;
-  background-image:url(https://static.wixstatic.com/media/df32b1_5e97e064c3d44e159e6203668e644f34.jpg_srz_1226_1243_85_22_0.50_1.20_0.00_jpg_srz);
+  background-image:url(http://ekladata.com/pHSAZY49Zfi0gXmcG2H1nckMt1c.jpg);
+  background-attachment: fixed;
   background-size: 100vw auto;
 }
 
@@ -124,6 +125,32 @@ footer {
 
 
 
+
+.glyphicon-lg
+{
+    font-size:4em
+}
+.info-block
+{
+    border-right:5px solid #CF0A1D;
+    margin-bottom:25px
+}
+.info-block .square-box
+{
+    width:100px;
+    min-height:110px;
+    margin-right:22px;
+    text-align:center!important;
+    padding:20px 0
+}
+.info-block.block-info
+{
+    border-color:#CF0A1D
+}
+.info-block.block-info .square-box
+{
+    color:#FFF
+}
 
 
 

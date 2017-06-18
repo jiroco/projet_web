@@ -18,8 +18,8 @@ if ((!isset($_SESSION['id'])) || (empty($_SESSION['id']))){
           <div class="row">
               <div class="col-md-10 col-md-offset-1">
                 <div class="well well-sm">
-                  <form class="form-horizontal" action="" method="post">
-                  <fieldset>
+                  <form class="form-horizontal" action="" method="POST">
+                  
                     <legend class="text-center">Nous Contacter<br/></legend>
             
                     <!-- Name input-->
@@ -49,10 +49,10 @@ if ((!isset($_SESSION['id'])) || (empty($_SESSION['id']))){
                     <!-- Form actions -->
                     <div class="form-group">
                       <div class="col-md-12 text-right">
-                        <button type="submit" class="btn btn-default btn-xs">Envoyer</button>
+                          <button type="submit" class="btn btn-primary btn-sm"><span class="glyphicon glyphicon-search"></span>Envoyer</button>
                       </div>
                     </div>
-                  </fieldset>
+                  
                   </form>
                 </div>
               </div>
@@ -124,7 +124,7 @@ else{
                     <!-- Form actions -->
                     <div class="form-group">
                       <div class="col-md-12 text-right">
-                        <button type="submit" class="btn btn-default btn-xs">Submit</button>
+                        <button type="submit" class="btn btn-primary btn-sm"><span class="glyphicon glyphicon-search"></span>Envoyer</button>
                       </div>
                     </div>
                   </fieldset>

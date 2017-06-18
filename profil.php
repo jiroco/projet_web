@@ -36,7 +36,7 @@ if ((!isset($_SESSION['id'])) || (empty($_SESSION['id']))){
 						                  <table class="table table-user-information">
 						                    <tbody>
 						                      <tr>
-						                        <td>Departement:</td>
+						                        <td>Département:</td>
 						                        <td><?php print_r($_SESSION['departement']) ?></td>
 						                      </tr>
 						                      <tr>
@@ -44,7 +44,7 @@ if ((!isset($_SESSION['id'])) || (empty($_SESSION['id']))){
 						                        <td><?php print_r($_SESSION['prenom']." ".$_SESSION["nom"]) ?></td>
 						                      </tr>
 						                      <tr>
-						                        <td>Username</td>
+						                        <td>Surnom</td>
 						                        <td><?php print_r($_SESSION['username']) ?></td>
 						                      </tr>						               
 							                  <tr>

@@ -29,14 +29,11 @@
         <input id="inputUsername" class="form-control" placeholder="Username" name="username" type="text">
 
         <label for="inputPassword" class="sr-only">Mot de passe</label>
-        <input id="inputPassword" class="form-control" placeholder="Password" name="passwd" type="password">
+        <input id="inputPassword" class="form-control" placeholder="Mot de passe" name="passwd" type="password">
 
-        <button class="btn btn-lg btn-primary btn-block" type="submit">S'inscrire</button>
+        <button class="btn btn-lg btn-primary btn-block btn-danger active" type="submit">S'inscrire</button>
       </form>
 
     </div>
 </body>
 </html>
-<?php
-include("include/register.inc.php");
-?>

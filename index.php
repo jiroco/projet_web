@@ -17,11 +17,11 @@
 
       <div class="bouton">
       <form methode="POST" action="login.php">
-        <button type="submit" class="btn btn-XL btn-default">Connexion</button>
+        <button type="submit" class="btn btn-XL btn-danger">Connexion</button>
         </form>
         <br><br>
         <form methode="POST" action="register.php">
-        <button type="submit" class="btn btn-XL btn-default">Inscription</button>
+        <button type="submit" class="btn btn-XL btn-danger active">Inscription</button>
         </form>
 
       </div>
