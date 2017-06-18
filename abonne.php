@@ -25,6 +25,7 @@
 
 							<?php
 							include("include/recherche_abonne.inc.php");
+							include("include/liste_abonne.inc.php");
 							?>
 						</div>
 			    	</div><!--panel group fin -->
