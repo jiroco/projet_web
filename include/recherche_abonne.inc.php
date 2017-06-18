@@ -16,8 +16,8 @@ if(isset($_POST['recherchea']) && !empty($_POST['recherchea'])){
 			$_SESSION["rechabonne"]=$resultat["ID"];
 			?>
 			<div>
-				<form method="POST">
-					<button type="submit" class="btn btn-primary btn-sm"><span class="glyphicon glyphicon-search"></span>S'abonner</button>
+				<form method="POST" action="include/abonnement.php">
+					<button type="submit" name='abonne' class="btn btn-primary btn-sm"><span class="glyphicon glyphicon-search" ></span>S'abonner</button>
 				</form>
 			</div>
 			<?php
@@ -55,4 +55,4 @@ if(isset($_POST['recherchea']) && !empty($_POST['recherchea'])){
 		}
 	}
 }
-include("abonnement.php");
+?>

@@ -1,6 +1,6 @@
 <?php
 include("connexiondb.php");
-
+session_start();
 if (isset($_POST["abonne"])){
 	$req = $DBcon->prepare('INSERT INTO `abonnee`(`IDUSER`, `IDUSERABONNE`) VALUES (?,?)');
 					
@@ -8,13 +8,16 @@ if (isset($_POST["abonne"])){
 	$req->bindValue(2, $_SESSION['rechabonne'], PDO::PARAM_STR);
 	$check=$req->execute();
 	if($check){
-		echo "Abonnement réussi";?>
-		<a href="accueil_connecte.php">Retour à l'accueil</a>
+		echo "Abonnement réussi, vous allez être redirigé !";
+	    header("Refresh: 3; URL=../accueil_connecte.php");?>
 <?php
 	}
 	else
 	    echo "Un problème s'est produit lors de la requete.<br>";
 
 	$req->closeCursor();
+}
+else{
+	echo "erreur";
 }
 ?>

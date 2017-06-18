@@ -37,7 +37,6 @@
 </div><!--container fin -->
 
 
-<?php
-include("include/abonnement.php");?>
+
 </body>
 </html>
