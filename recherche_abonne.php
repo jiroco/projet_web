@@ -15,4 +15,5 @@ if ((!isset($_SESSION['id'])) || (empty($_SESSION['id']))){
 
 <?php
 include("include/recherche_abonne.inc.php");
+include("include/liste_abonne.inc.php");
 ?>
