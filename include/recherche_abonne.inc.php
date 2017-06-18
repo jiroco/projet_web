@@ -20,63 +20,39 @@ if(isset($_POST['recherchea']) && !empty($_POST['recherchea'])){
 					<button type="submit" class="btn btn-primary btn-sm"><span class="glyphicon glyphicon-search"></span>S'abonner</button>
 				</form>
 			</div>
-
 			<?php
 		}
-	else {
-		echo "L'utilisateur ".$userrecherche." n'existe pas. Veuillez rentrer le bon pseudo. Voici la liste possible.<br>";
-		$req = $DBcon->prepare('SELECT NOM, PRENOM, USERNAME, IMAGE_PROFIL FROM user  WHERE USERNAME LIKE ?'); 
-		$req->bindValue(1,"%".$userrecherche."%",PDO::PARAM_INT);
-		$check=$req->execute();
-		?>
-		<br><div class="container col-md-10">
-	    <!--<div class="row ">    
-	        <div id="profil" class="fade in active"> 
-	        	<div class="container" style="width:100%;"> 
-	        		<div class="panel-group">
-					    <div class="panel panel-default">
-						    <div class="panel-body"> 
-								<div class="row">
-								<table class="table table-user-information">
-						            <tbody>-->
-									
-		<?php
-
-		if($check){
-			while ($resultat=$req->fetch()){
-				//print_r("Nom : ".$resultat["NOM"]." ");
-			//	print_r("Prenom : ".$resultat["PRENOM"]." ");
-			//	print_r("Username : ".$resultat["USERNAME"]."<br>");
+		else {
+			echo "L'utilisateur '".$userrecherche."' n'existe pas. Veuillez rentrer le bon pseudo. <br/>Voici la liste des utilisateurs possible :<br/><br/>";
+			$req = $DBcon->prepare('SELECT NOM, PRENOM, USERNAME, IMAGE_PROFIL FROM user  WHERE USERNAME LIKE ?'); 
+			$req->bindValue(1,"%".$userrecherche."%",PDO::PARAM_INT);
+			$check=$req->execute();
 			?>
-								<div class="col-md-5 col-lg-5" align="left">
-									<img src="<?php echo "image/".$resultat['IMAGE_PROFIL'].".png"?>" class="media-object" style="width:100px;margin-top: 10px; margin-left: 10px;margin-bottom: 10px;"> 
-        						   	</div>
-                					
-	                				<div class=" col-md-7 col-lg-7 ">
-						            Prénom et Nom :
-						            <?php print_r($resultat["PRENOM"]." ".$resultat["NOM"])?>
-						            <br>Username
-						            <?php print_r($resultat["USERNAME"]) ?>
-						            </div>
-						            <!--</tbody>
-						            </table>
-						            
-					            </div>
-						    </div>
-					    </div>
-					    </div>
-		        </div>
-	        </div>
 
-	  </div>-->
-	</div><?php
-			}
+		   	<div class="searchable-container"><!-- searchable-container debut -->        
+				<?php
+				if($check){
+					while ($resultat=$req->fetch()){
+					?>
+					<div class="items col-xs-12 col-sm-12 col-md-6 col-lg-6 clearfix"><!-- items debut -->  
+						<div class="info-block block-info clearfix"><!-- info-block debut -->  
+		     				<div class="square-box pull-left">
+								<img src="<?php echo "image/".$resultat['IMAGE_PROFIL'].".png"?>" class="media-object" style="width:100px;margin-top: 10px; margin-left: 10px;margin-bottom: 10px;"> 
+		                	</div>
+							<br/>
+				            <h5><b>Prénom et Nom :</b></h5> <tab/><?php print_r($resultat["PRENOM"]." ".$resultat["NOM"]);?>
+				            <br>
+				            <h5><b>Username : </b></h5> <tab/><?php print_r($resultat["USERNAME"]);?>
+
+	             		</div><!-- info-block fin -->  
+	     			</div><!-- items fin -->  
+		    </div><!-- searchable-container fin -->  
+				<?php
+					} //fin while
+				}//fin if 
+			else
+	            echo "</br><div class='container col-md-4 col-md-offset-4'><div class='alert alert-danger' style='text-align: center;'> <strong>Attention !</strong> Erreur de requete.</div></div>";        
 		}
-		else
-			echo "Erreur de requete.<br>";
-	}
-
 	}
 }
-
 include("abonnement.php");

@@ -25,7 +25,11 @@ if(isset($_POST['email']) && !empty($_POST['email']) && isset($_POST['prenom']) 
     }
     else
         echo "Un problème s'est produit lors de la requete.<br>";
-    
-    $req->closeCursor();
+
 }
+else
+    include("../register.php");
+    echo "</br><div class='container col-md-4 col-md-offset-4'><div class='alert alert-danger' style='text-align: center;'> <strong>Attention !</strong> un champ est vide. </div></div>";
+    
+$req->closeCursor();
 ?>

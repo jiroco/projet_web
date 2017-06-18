@@ -126,6 +126,32 @@ footer {
 
 
 
+.glyphicon-lg
+{
+    font-size:4em
+}
+.info-block
+{
+    border-right:5px solid #CF0A1D;
+    margin-bottom:25px
+}
+.info-block .square-box
+{
+    width:100px;
+    min-height:110px;
+    margin-right:22px;
+    text-align:center!important;
+    padding:20px 0
+}
+.info-block.block-info
+{
+    border-color:#CF0A1D
+}
+.info-block.block-info .square-box
+{
+    color:#FFF
+}
+
 
 
 

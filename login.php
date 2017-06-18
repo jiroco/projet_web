@@ -17,7 +17,7 @@
 			<br>
 			<input name="passwd" id="passwd" class="form-control" placeholder="Mot de passe" required="" type="password"/>
 			<br>
-			<input type="submit" class="btn btn-default btn-lg" value="Connexion"/>
+			<input type="submit" class="btn btn-danger btn-lg active" value="Connexion"/>
 		</div>
 	</form>
 </div>
