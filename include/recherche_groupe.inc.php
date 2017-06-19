@@ -15,7 +15,7 @@ if(isset($_POST['rechercheag']) && !empty($_POST['rechercheag'])){
 			?>
 			<div>
 				<form method="POST">
-					<button type="submit" class="btn btn-primary btn-sm"><span class="glyphicon glyphicon-search"></span>S'abonner</button>
+					<button type="submit" name="groupe" class="btn btn-primary btn-sm"><span class="glyphicon glyphicon-search"></span>S'abonner</button>
 				</form>
 			</div>
 
